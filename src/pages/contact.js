@@ -10,7 +10,7 @@ export default function about() {
             <header>
                 <NavBar />
             </header>
-            <main className="grow flex flex-col justify-around">
+            <main className="grow flex flex-col">
                 <ContactForm />
             </main>
             <footer>
