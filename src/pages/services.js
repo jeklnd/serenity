@@ -11,7 +11,7 @@ export default function services() {
             <header>
                 <NavBar />
             </header>
-            <main className="grow flex flex-col justify-around">
+            <main className="grow flex flex-col">
                 <ServicesCards />
                 <ContactForm />
             </main>
