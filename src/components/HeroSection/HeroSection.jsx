@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
     return (
-        <div className="relative">
+        <section id="heroSection" className="relative">
             <Image
                 src={hero}
                 alt="Handyman image"
@@ -23,6 +23,6 @@ export default function HeroSection() {
                     <RequestForm />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
