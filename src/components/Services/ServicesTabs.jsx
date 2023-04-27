@@ -6,7 +6,7 @@ export default function ServicesTabs() {
     const servicesTabs = ["Room", "Area", "Service"];
     const servicesTabsListItems = servicesTabs.map((tab, index) => {
         return (
-            <li key={index} className="grow border-4 text-center">
+            <li key={index} className="grow text-center">
                 <button
                     onClick={() => {
                         setIsVisibleTab(tab);
@@ -32,20 +32,24 @@ export default function ServicesTabs() {
         );
     });
     return (
-        <div className="container mx-auto flex flex-col ">
-            <div className="text-center">
-                <h1>What we do</h1>
-                <p>
-                    View our handyman service offerings by room, area, or
-                    service.
-                </p>
+        <section id="services" className="bg-gray-200">
+            <div className="container mx-auto flex flex-col px-4 py-14 gap-8">
+                <div className="text-center">
+                    <h1 className="text-3xl font-bold text-gray-700 mb-2">
+                        How we help
+                    </h1>
+                    <p className="text-xl text-gray-600">
+                        View our list of handyman service offerings by room,
+                        area, or service.
+                    </p>
+                </div>
+                <div className="border-4">
+                    <ul className="flex">{servicesTabsListItems}</ul>
+                    <ul className="flex justify-around">
+                        {isVisibleTab === "Room" && roomsListItems}
+                    </ul>
+                </div>
             </div>
-            <div className="border-4">
-                <ul className="flex">{servicesTabsListItems}</ul>
-                <ul className="flex justify-around">
-                    {isVisibleTab === "Room" && roomsListItems}
-                </ul>
-            </div>
-        </div>
+        </section>
     );
 }
