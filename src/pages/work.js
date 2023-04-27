@@ -9,7 +9,7 @@ import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
 export default function about() {
     return (
         <>
-            <header>
+            <header className="sticky top-0 z-40">
                 <NavBar />
             </header>
             <main className="grow">
