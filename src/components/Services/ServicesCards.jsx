@@ -22,7 +22,11 @@ export default function ServicesCards() {
     const servicesListItems = services.map((service, index) => {
         return (
             <li key={index} className="flex justify-center">
-                <div className={`h-12 w-12 bg-slate-800 ${index % 2 !== 0 && "order-2"}`}></div>
+                <div
+                    className={`h-12 w-12 bg-slate-800 ${
+                        index % 2 !== 0 && "order-2"
+                    }`}
+                ></div>
                 <div>
                     <h1>{service.name}</h1>
                     <ul className="list-disc list-inside">
@@ -37,7 +41,7 @@ export default function ServicesCards() {
     });
     return (
         <div className="container mx-auto">
-            <ul>{servicesListItems}</ul>
+            <ul className="flex flex-col gap-6">{servicesListItems}</ul>
         </div>
     );
 }
