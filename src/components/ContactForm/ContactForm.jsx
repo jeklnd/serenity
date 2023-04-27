@@ -4,7 +4,6 @@ import RequestForm from "@/components/RequestForm/RequestForm.jsx";
 export default function Contact() {
     return (
         <div className="container mx-auto">
-            <div className="flex">
                 <div className="border-2 flex flex-col justify-around">
                     <h1>Contact Information</h1>
                     <div>
@@ -32,7 +31,6 @@ export default function Contact() {
                     </div>
                     <RequestForm />
                 </div>
-            </div>
         </div>
     );
 }
