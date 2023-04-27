@@ -62,7 +62,7 @@ export default function RequestForm() {
                     <LockClosedIcon className="text-gray-500 h-12 w-8" />
                     <p className="text-gray-400 text-xs">
                         The security and privacy of your data is our top
-                        priority and we never sell your information to
+                        priority. We never sell your information to
                         third-party companies.
                     </p>
                 </div>
