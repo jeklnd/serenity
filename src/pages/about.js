@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar.jsx";
-import ContactForm from "@/components/ContactForm/ContactForm.jsx";
-
+import RequestQuoteForm from "@/components/RequestForm/RequestQuoteForm.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
 
@@ -17,7 +16,7 @@ export default function about() {
                     Serenity Home Repair? What is the background of serenity
                     Home repair? Why should I hire serenity home repair?
                 </h1>
-                <ContactForm />
+                <RequestQuoteForm />
             </main>
             <footer>
                 <NavFooter />
