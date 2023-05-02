@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./navbar.module.css";
+// import styles from "./navbar.module.css";
 
 export default function NavSidebar({ isOpen, onToggleMenu }) {
     const router = useRouter();
@@ -14,7 +14,7 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
         <>
             <div
                 data-isopen={isOpen}
-                className="-translate-x-full data-[isOpen=true]:translate-x-0 transition flex fixed top-0 left-0 h-screen w-screen overflow-hidden bg-slate-800 z-40 justify-center items-center "
+                className="-translate-x-full data-[isOpen=true]:translate-x-0 transition flex fixed top-0 left-0 h-screen w-screen overflow-hidden bg-slate-500 z-40 justify-center items-center "
                 onTouchStart={(e) => {
                     setXPosition(e.changedTouches[0].clientX);
                 }}
@@ -22,7 +22,7 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
             >
                 {/* decorative lines*/}
                 {/* <div className="fixed bottom-0 w-screen border-[1px] border-sy-500/50"></div> */}
-                <div className="fixed top-0 w-screen border-[1px] border-sy-500/50"></div>
+                <div className="fixed top-0 w-screen border-[1px] border-sy-500/75"></div>
                 {/* <div className="fixed left-0 h-screen border-[1px] border-sy-500/50"></div> */}
                 {/* <div className="fixed right-0 h-screen border-[1px] border-sy-500/50 z-10"></div> */}
                 {/* <div
@@ -54,7 +54,7 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
                                             ? href === isActive
                                             : isActive === "/"
                                     }
-                                    className="p-4 tracking-widest  text-gray-700 data-[active=true]:text-gray-400 data-[active=true]:font-medium text-4xl"
+                                    className="p-4 tracking-widest  text-gray-700 data-[active=true]:text-gray-300 data-[active=true]:font-medium text-4xl"
                                     onClick={onToggleMenu}
                                 >
                                     <Link href={href !== "/home" ? href : "/"}>
