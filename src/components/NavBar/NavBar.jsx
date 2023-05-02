@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks.jsx";
 import RequestQuoteBtn from "@/components/RequestForm/RequestQuoteBtn.jsx";
 import NavSidebar from "./NavSidebar.jsx";
 import RequestQuoteDropdown from "@/components/RequestForm/RequestQuoteDropdown.jsx";
+import Backdrop from "@/components/RequestForm/Backdrop.jsx";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function NavBar() {
     return (
         <>
             <nav className="bg-gray-200 drop-shadow-md z-50 relative">
-                <div className="fixed top-0 w-screen border-[1px] border-sy-500/50"></div>
+                <div className="fixed top-0 w-screen border-2 border-sy-500"></div>
 
                 <div className="container mx-auto flex justify-between items-center p-4 gap-4">
                     <div className="flex items-center gap-4">
@@ -33,13 +34,14 @@ export default function NavBar() {
                         </p>
                         <RequestQuoteBtn
                             text="Request Quote"
-                            onToggleModal={handleButtonClick}
+                            onClick={handleButtonClick}
                         />
                     </div>
                 </div>
                 <NavSidebar isOpen={isOpen} onToggleMenu={handleClick} />
             </nav>
             <RequestQuoteDropdown isDroppedDown={isDroppedDown} />
+            <Backdrop isVisible={isDroppedDown} onClick={handleButtonClick}/>
         </>
     );
 }
