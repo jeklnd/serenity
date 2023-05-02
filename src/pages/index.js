@@ -4,8 +4,8 @@ import NavBar from "@/components/NavBar/NavBar.jsx";
 import HeroSection from "@/components/HeroSection/HeroSection.jsx";
 import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider.jsx";
 import ServicesSection from "@/components/Services/ServicesSection.jsx";
-import Map from "@/components/Map/Map.jsx";
-import RequestQuoteForm from "@/components/RequestForm/RequestQuoteForm.jsx";
+import ProudlyServing from "@/components/Map/ProudlyServing.jsx";
+import ContactSection from "@/components/Contact/ContactSection.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
 
@@ -21,17 +21,8 @@ export default function Home() {
                 <HeroSection />
                 <TestimonialSlider />
                 <ServicesSection />
-                <div className=" bg-slate-400">
-                    <div className="container mx-auto text-center">
-                        <p>
-                            Proudly serving all Montgomery County postal codes
-                            including Conshohocken, Plymouth Meeting, Lafayette
-                            Hill, and more.
-                        </p>
-                    </div>
-                </div>
-                <Map />
-                <RequestQuoteForm />
+                <ProudlyServing />
+                <ContactSection />
             </main>
             <footer>
                 <NavFooter />
