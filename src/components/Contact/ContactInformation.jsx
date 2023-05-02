@@ -19,7 +19,7 @@ export default function ContactInformation() {
     return (
         <section
             id="contact-information"
-            className="bg-slate-400 py-16 relative flex flex-col items-center gap-8"
+            className="bg-slate-400 py-16 relative flex flex-col items-center  gap-8"
         >
             <AccentBorder />
             <h2 className="text-3xl font-extrabold tracking-wider text-gray-700 text-center py-6">
@@ -28,7 +28,7 @@ export default function ContactInformation() {
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-14 md:gap-24">
                 {/* Phone and Email Div*/}
-                <div className="flex flex-col gap-14 md:gap-218">
+                <div className="flex flex-col gap-14 first:self-start">
                     <div className={divStyles}>
                         <PhoneIcon className={iconStyles} />
                         <p className={pStyles}>610-613-4832</p>
@@ -55,7 +55,7 @@ export default function ContactInformation() {
                                         {day}
                                     </p>
                                     <p className="text-lg text-gray-600">
-                                        9am&ndash;5pm
+                                        9am &ndash; 5pm
                                     </p>
                                 </li>
                             );
