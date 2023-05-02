@@ -48,10 +48,10 @@ export default function CookiePolicy() {
                             <span data-custom-class="body_text">
                                 This Cookie Policy explains how{" "}
                                 <bdt className="question">Katapault, LLC</bdt>{" "}
-                                ("
-                                <strong>Company</strong>," "<strong>we</strong>
-                                ," "<strong>us</strong>," and "
-                                <strong>our</strong>") uses cookies and similar
+                                (&quot;
+                                <strong>Company</strong>,&quot; &quot;<strong>we</strong>
+                                ,&quot; &quot;<strong>us</strong>,&quot; and &quot;
+                                <strong>our</strong>&quot;) uses cookies and similar
                                 technologies to recognize you when you visit our
                                 website at{" "}
                                 <bdt className="question">
@@ -63,7 +63,7 @@ export default function CookiePolicy() {
                                         https://serenityhomerepair.com
                                     </a>
                                 </bdt>{" "}
-                                ("<strong>Website</strong>"). It explains what
+                                (&quot;<strong>Website</strong>&quot;). It explains what
                                 these technologies are and why we use them, as
                                 well as your rights to control our use of them.
                             </span>
@@ -131,9 +131,9 @@ export default function CookiePolicy() {
                             <span data-custom-class="body_text">
                                 Cookies set by the website owner (in this case,{" "}
                                 <bdt className="question">Katapault, LLC</bdt>)
-                                are called "first-party cookies." Cookies set by
+                                are called &quot;first-party cookies.&quot; Cookies set by
                                 parties other than the website owner are called
-                                "third-party cookies." Third-party cookies
+                                &quot;third-party cookies.&quot; Third-party cookies
                                 enable third-party features or functionality to
                                 be provided on or through the website (e.g.,
                                 advertising, interactive content, and
@@ -174,7 +174,7 @@ export default function CookiePolicy() {
                                 party cookies for several reasons. Some cookies
                                 are required for technical reasons in order for
                                 our Website to operate, and we refer to these as
-                                "essential" or "strictly necessary" cookies.
+                                &quot;essential&quot; or &quot;strictly necessary&quot; cookies.
                                 Other cookies also enable us to track and target
                                 the interests of our users to enhance the
                                 experience on our Online Properties.{" "}
@@ -306,7 +306,7 @@ export default function CookiePolicy() {
                     <span data-custom-class="body_text">
                         As the means by which you can refuse cookies through
                         your web browser controls vary from browser to browser,
-                        you should visit your browser's help menu for more
+                        you should visit your browser&apos;s help menu for more
                         information. The following is information about how to
                         manage cookies on the most popular browsers:
                     </span>
@@ -450,7 +450,7 @@ export default function CookiePolicy() {
                                     to recognize or track visitors to a website.
                                     We may use other, similar technologies from
                                     time to time, like web beacons (sometimes
-                                    called "tracking pixels" or "clear gifs").
+                                    called &quot;tracking pixels&quot; or &quot;clear gifs&quot;).
                                     These are tiny graphics files that contain a
                                     unique identifier that enables us to
                                     recognize when someone has visited our
@@ -530,8 +530,8 @@ export default function CookiePolicy() {
                 <div style={{ lineHeight: "1.5" }}>
                     <span style={{ fontSize: 15, color: "rgb(89, 89, 89)" }}>
                         <span data-custom-class="body_text">
-                            Websites may also use so-called "Flash Cookies"
-                            (also known as Local Shared Objects or "LSOs") to,
+                            Websites may also use so-called &quot;Flash Cookies&quot;
+                            (also known as Local Shared Objects or &quot;LSOs&quot;) to,
                             among other things, collect and store information
                             about your use of our services, fraud prevention,
                             and for other site operations.
@@ -591,7 +591,7 @@ export default function CookiePolicy() {
                                 following the instructions (which may include
                                 instructions that explain, for example, how to
                                 delete existing Flash Cookies (referred to
-                                "information" on the Macromedia site), how to
+                                    &quot;information&quot; on the Macromedia site), how to
                                 prevent Flash LSOs from being placed on your
                                 computer without your being asked, and (for
                                 Flash Player 8 and later) how to block Flash
@@ -954,7 +954,7 @@ export default function CookiePolicy() {
                     paddingTop: 16,
                 }}
             >
-                This cookie policy was created using Termly's{" "}
+                This cookie policy was created using Termly&apos;s{" "}
                 <a
                     style={{ color: "rgb(48, 48, 241) !important" }}
                     href="https://termly.io/products/cookie-consent-manager/"

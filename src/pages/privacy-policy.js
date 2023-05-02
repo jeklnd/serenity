@@ -61,25 +61,29 @@ export default function Privacy() {
                                     )
                                     <bdt className="statement-end-if-in-editor" />
                                 </bdt>{" "}
-                                (<bdt className="block-component" />"
+                                (<bdt className="block-component" />
+                                &quot;
                                 <bdt className="block-component" />
                                 <bdt className="question">
                                     <strong>Serenity Home Repair</strong>
                                 </bdt>
                                 <bdt className="else-block" />
-                                ," "<strong>we</strong>," "<strong>us</strong>,"
-                                or "<strong>our</strong>"
+                                ,&quot; &quot;<strong>we</strong>,&quot; &quot;
+                                <strong>us</strong>,&quot; or &quot;
+                                <strong>our</strong>&quot;
                                 <bdt className="statement-end-if-in-editor" />
                             </span>
                             <span data-custom-class="body_text">
                                 ), describes how and why we might collect,
                                 store, use, and/or share (
-                                <bdt className="block-component" />"
-                                <strong>process</strong>"
+                                <bdt className="block-component" />
+                                &quot;
+                                <strong>process</strong>&quot;
                                 <bdt className="statement-end-if-in-editor" />)
                                 your information when you use our services (
-                                <bdt className="block-component" />"
-                                <strong>Services</strong>"
+                                <bdt className="block-component" />
+                                &quot;
+                                <strong>Services</strong>&quot;
                                 <bdt className="statement-end-if-in-editor" />
                                 ), such as when you:
                             </span>
@@ -1426,20 +1430,21 @@ export default function Privacy() {
                                             <span data-custom-class="body_text">
                                                 <em>Location Data.</em> We
                                                 collect location data such as
-                                                information about your device's
-                                                location, which can be either
-                                                precise or imprecise. How much
-                                                information we collect depends
-                                                on the type and settings of the
-                                                device you use to access the
-                                                Services. For example, we may
-                                                use GPS and other technologies
-                                                to collect geolocation data that
-                                                tells us your current location
-                                                (based on your IP address). You
-                                                can opt out of allowing us to
-                                                collect this information either
-                                                by refusing access to the
+                                                information about your
+                                                device&apos;s location, which
+                                                can be either precise or
+                                                imprecise. How much information
+                                                we collect depends on the type
+                                                and settings of the device you
+                                                use to access the Services. For
+                                                example, we may use GPS and
+                                                other technologies to collect
+                                                geolocation data that tells us
+                                                your current location (based on
+                                                your IP address). You can opt
+                                                out of allowing us to collect
+                                                this information either by
+                                                refusing access to the
                                                 information or by disabling your
                                                 Location setting on your device.
                                                 However, if you choose to opt
@@ -2343,13 +2348,12 @@ export default function Privacy() {
                                                                                                                                     agents
                                                                                                                                     (
                                                                                                                                     <bdt className="block-component" />
-
-                                                                                                                                    "
+                                                                                                                                    &quot;
                                                                                                                                     <strong>
                                                                                                                                         third
                                                                                                                                         parties
                                                                                                                                     </strong>
-                                                                                                                                    "
+                                                                                                                                    &quot;
                                                                                                                                     <bdt className="statement-end-if-in-editor" />
 
                                                                                                                                     )
@@ -2689,7 +2693,7 @@ export default function Privacy() {
                                                                                                                                         device
                                                                                                                                         (
                                                                                                                                         <bdt className="block-component" />
-                                                                                                                                        "cache"
+                                                                                                                                        &quot;cache&quot;
                                                                                                                                         <bdt className="statement-end-if-in-editor" />
                                                                                                                                         )
                                                                                                                                         your
@@ -4450,7 +4454,7 @@ export default function Privacy() {
                                                                                                                                                         the
                                                                                                                                                         section{" "}
                                                                                                                                                         <bdt className="block-component" />
-                                                                                                                                                        "
+                                                                                                                                                        &quot;
                                                                                                                                                         <bdt className="statement-end-if-in-editor" />
                                                                                                                                                     </span>
                                                                                                                                                 </span>
@@ -4498,7 +4502,7 @@ export default function Privacy() {
                                                                                                                                                 >
                                                                                                                                                     <span data-custom-class="body_text">
                                                                                                                                                         <bdt className="block-component" />
-                                                                                                                                                        "
+                                                                                                                                                        &quot;
                                                                                                                                                         <bdt className="statement-end-if-in-editor" />{" "}
                                                                                                                                                         below
                                                                                                                                                         <bdt className="block-component" />
@@ -4801,7 +4805,7 @@ export default function Privacy() {
                                                                                                                                                         Do-Not-Track
                                                                                                                                                         (
                                                                                                                                                         <bdt className="block-component" />
-                                                                                                                                                        "DNT"
+                                                                                                                                                        &quot;DNT&quot;
                                                                                                                                                         <bdt className="statement-end-if-in-editor" />
 
                                                                                                                                                         )
@@ -5066,9 +5070,9 @@ export default function Privacy() {
                                                                                                                                                         as
                                                                                                                                                         the{" "}
                                                                                                                                                         <bdt className="block-component" />
-                                                                                                                                                        "Shine
+                                                                                                                                                        &quot;Shine
                                                                                                                                                         The
-                                                                                                                                                        Light"
+                                                                                                                                                        Light&quot;
                                                                                                                                                         <bdt className="statement-end-if-in-editor" />{" "}
                                                                                                                                                         law,
                                                                                                                                                         permits
@@ -5473,7 +5477,7 @@ export default function Privacy() {
                                                                                                                                                         an
                                                                                                                                                         updated{" "}
                                                                                                                                                         <bdt className="block-component" />
-                                                                                                                                                        "Revised"
+                                                                                                                                                        &quot;Revised&quot;
                                                                                                                                                         <bdt className="statement-end-if-in-editor" />{" "}
                                                                                                                                                         date
                                                                                                                                                         and
@@ -6179,7 +6183,7 @@ export default function Privacy() {
                                                                                                                                         was
                                                                                                                                         created
                                                                                                                                         using
-                                                                                                                                        Termly's{" "}
+                                                                                                                                        Termly&apos;s{" "}
                                                                                                                                         <a
                                                                                                                                             style={{
                                                                                                                                                 color: "rgb(48, 48, 241) !important",
