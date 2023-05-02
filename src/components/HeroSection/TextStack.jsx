@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function TextStack() {
     return (
-        <div className="flex flex-col gap-4 text-center sm:text-left max-w-[22rem] sm:max-w-[32rem]">
+        <div className="flex flex-col gap-7 text-center sm:text-left max-w-[22rem] sm:max-w-[32rem] py-6">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl  text-gray-800 font-bold leading-10 ">
                 Bring{" "}
                 <span className="underline decoration-sy-700 whitespace-nowrap">
