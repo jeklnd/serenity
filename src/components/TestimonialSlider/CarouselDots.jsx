@@ -8,7 +8,7 @@ export default function CarouselDots({ isVisibleIndex, onViewTestimonial }) {
                 <div
                     key={index}
                     data-active={index === isVisibleIndex}
-                    className="text-center h-2 w-2 rounded-full bg-gray-600/50 data-[active=true]:bg-gray-600"
+                    className="text-center h-2 w-2 rounded-full bg-gray-600/50 data-[active=true]:bg-gray-600 cursor-pointer"
                     onClick={() => onViewTestimonial(index)}
                 ></div>
             ))}
