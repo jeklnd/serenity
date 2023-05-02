@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar.jsx";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider/BeforeAfterSlider.jsx";
-import RequestQuoteForm from "@/components/RequestForm/RequestQuoteForm.jsx";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider/BeforeAndAfters.jsx";
+import ContactSection from "@/components/Contact/ContactSection.jsx";
 import ImageGallery from "@/components/ImageGallery/ImageGallery.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
@@ -13,9 +13,16 @@ export default function about() {
                 <NavBar />
             </header>
             <main className="grow">
-                <BeforeAfterSlider />
+                <div className="bg-gray-200">
+                    {" "}
+                    <h1 className="text-3xl font-bold text-gray-700 text-center pt-8">
+                        Work
+                    </h1>
+                    <BeforeAfterSlider />
+                </div>
+
                 <ImageGallery />
-                <RequestQuoteForm />
+                <ContactSection />
             </main>
             <footer>
                 <NavFooter />
