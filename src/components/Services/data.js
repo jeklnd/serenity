@@ -1,23 +1,37 @@
+import bedroom from "public/assets/services/bedroom.jpeg";
+import bathroom from "public/assets/services/bathroom.jpeg";
+import kitchen from "public/assets/services/kitchen.webp";
+import basement from "public/assets/services/basement.jpeg";
+import { MdPlumbing } from "react-icons/md";
+import { MdElectricalServices } from "react-icons/md";
+import { MdKitchen } from "react-icons/md";
+import { MdYard } from "react-icons/md";
+import { MdHome } from "react-icons/md";
+
 export const rooms = [
     {
         room: "Bedroom",
         image: "https://picsum.photos/200",
-        text: "lorem ipsum gerby floopy flipping fool wagon garbunkle do diagrama gonal tire teeker flippy flick flook flock",
+        text: "Bring serenity to the most peaceful room of the home with our full range of bedroom services.",
+        image: bedroom,
     },
     {
         room: "Bathroom",
         image: "https://picsum.photos/200",
-        text: "lorem ipsum gerby floopy flipping fool wagon garbunkle do diagrama gonal tire teeker flippy flick flook flock",
+        text: "Ready to replace the vanity? Retile the floor? Install a new toilet? Serenity Home Repair has you covered.",
+        image: bathroom,
     },
     {
         room: "Kitchen",
         image: "https://picsum.photos/200",
-        text: "lorem ipsum gerby floopy flipping fool wagon garbunkle do diagrama gonal tire teeker flippy flick flook flock",
+        text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind.",
+        image: kitchen,
     },
     {
         room: "Basement",
         image: "https://picsum.photos/200",
-        text: "lorem ipsum gerby floopy flipping fool wagon garbunkle do diagrama gonal tire teeker flippy flick flook flock",
+        text: "Bring tranquility to your home from the bottom up. Serenity Home Repair's basement services cover it all.",
+        image: basement,
     },
 ];
 
@@ -39,6 +53,7 @@ export const services = [
             "Painting",
             "Furniture assembly and repair",
         ],
+        icon: <MdHome />,
     },
     {
         image: "https://picsum.photos/200",
@@ -51,6 +66,7 @@ export const services = [
             "Drain cleaning",
             "Water pressure issues",
         ],
+        icon: <MdPlumbing />,
     },
     {
         image: "https://picsum.photos/200",
@@ -61,6 +77,7 @@ export const services = [
             "Circuit breaker replacement",
             "Lighting installation and repair",
         ],
+        icon: <MdElectricalServices />,
     },
     {
         image: "https://picsum.photos/200",
@@ -74,6 +91,7 @@ export const services = [
             "Countertop repair and replacement",
             "Flooring installation and replacement",
         ],
+        icon: <MdKitchen />,
     },
     {
         image: "https://picsum.photos/200",
@@ -86,5 +104,6 @@ export const services = [
             "Pressure washing",
             "Solar-powered exterior lighting installation",
         ],
+        icon: <MdYard />,
     },
 ];
