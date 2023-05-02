@@ -11,7 +11,7 @@ export default function about() {
             <header className="sticky top-0 z-40">
                 <NavBar />
             </header>
-            <main className="grow flex flex-col">
+            <main className="grow flex flex-col bg-slate-400">
                 <ContactSection />
                 <ContactInformation />
             </main>
