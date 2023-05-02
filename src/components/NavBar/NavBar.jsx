@@ -4,13 +4,13 @@ import Logo from "./Logo.jsx";
 import NavLinks from "./NavLinks.jsx";
 import RequestQuoteBtn from "@/components/RequestForm/RequestQuoteBtn.jsx";
 import NavSidebar from "./NavSidebar.jsx";
-import RequestQuoteModal from "@/components/RequestForm/RequestQuoteModal.jsx";
+import RequestQuoteDropdown from "@/components/RequestForm/RequestQuoteDropdown.jsx";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isDroppedDown, setIsDroppedDown] = useState(false);
     const handleButtonClick = () => {
-        setIsModalOpen(!isModalOpen);
+        setIsDroppedDown(!isDroppedDown);
     };
 
     const handleClick = () => {
@@ -39,7 +39,7 @@ export default function NavBar() {
                 </div>
                 <NavSidebar isOpen={isOpen} onToggleMenu={handleClick} />
             </nav>
-            <RequestQuoteModal isModalOpen={isModalOpen} />
+            <RequestQuoteDropdown isDroppedDown={isDroppedDown} />
         </>
     );
 }
