@@ -22,7 +22,7 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
             >
                 {/* decorative lines*/}
                 {/* <div className="fixed bottom-0 w-screen border-[1px] border-sy-500/50"></div> */}
-                <div className="fixed top-0 w-screen border-[1px] border-sy-500/75"></div>
+                <div className="fixed top-0 w-screen border-2 border-sy-500"></div>
                 {/* <div className="fixed left-0 h-screen border-[1px] border-sy-500/50"></div> */}
                 {/* <div className="fixed right-0 h-screen border-[1px] border-sy-500/50 z-10"></div> */}
                 {/* <div
