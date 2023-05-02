@@ -7,7 +7,7 @@ const spaceGrotesque = localFont({
 
 export default function QuotationMark() {
     return (
-        <span className={`text-4xl leading-6 text-gray-600/80 ${spaceGrotesque.className} first:-ml-4 first:-my-2 last:-mr-4 last:-my-8`}>
+        <span className={`text-6xl leading-6 text-gray-600/40 ${spaceGrotesque.className} first:-ml-4 first:-my-2 last:-mr-4 last:-my-8`}>
             &quot;
         </span>
     );
