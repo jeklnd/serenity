@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar.jsx";
-import RequestQuoteForm from "@/components/RequestForm/RequestQuoteForm.jsx";
+import ContactInformation from "@/components/Contact/ContactInformation.jsx";
+import ContactSection from "@/components/Contact/ContactSection.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
 
@@ -11,7 +12,8 @@ export default function about() {
                 <NavBar />
             </header>
             <main className="grow flex flex-col">
-                <RequestQuoteForm />
+                <ContactSection />
+                <ContactInformation />
             </main>
             <footer>
                 <NavFooter />
