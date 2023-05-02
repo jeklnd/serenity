@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function ServicesSlider() {
-    const [selectedSide, setSelectedSide] = useState("left");
-
+export default function ServicesSlider({selectedSide, setSelectedSide}) {
     const [xPosition, setXPosition] = useState(null);
 
     const handleSwipe = (e) => {
@@ -18,12 +16,12 @@ export default function ServicesSlider() {
 
     return (
         <>
-            <div className="bg-slate-300 shadow-inner shadow-slate-400/40 rounded-full flex relative text-lg">
+            <div className="bg-slate-300 shadow-inner shadow-slate-400/40 rounded-full flex relative text-lg cursor-pointer">
                 {["Room", "Service"].map((category, index) => {
                     return (
                         <div
                             key={index}
-                            className="rounded-full px-8 py-2 z-10 font-bold tracking-widest text-sm sm:text-md lg:text-lg text-gray-600"
+                            className="rounded-full px-8 py-2 z-10 font-bold tracking-widest text-sm sm:text-md lg:text-lg text-gray-600 "
                             onClick={() => 
                                 index === 0
                                     ? setSelectedSide("left")
