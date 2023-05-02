@@ -60,7 +60,7 @@ export default function TestimonialSlider() {
                             >
                                 <div className="flex [&>*:last-child]:self-end">
                                     <QuotationMark />
-                                    <p className="text-sm font-normal text-gray-600 sm:text-md">
+                                    <p className="text-sm font-normal text-gray-600 sm:text-md italic">
                                         {testimonial.text}
                                     </p>
                                     <QuotationMark />
