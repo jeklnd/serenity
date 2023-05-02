@@ -19,12 +19,12 @@ export default function ContactInformation() {
     return (
         <section
             id="contact-information"
-            className="bg-slate-400 py-16 relative flex flex-col items-center  gap-8"
+            className="bg-slate-400 py-16 relative flex flex-col items-center gap-8"
         >
-            <AccentBorder />
-            <h2 className="text-3xl font-extrabold tracking-wider text-gray-700 text-center py-6">
+            <h1 className="text-3xl font-bold text-gray-700 text-center">
                 Contact Information
-            </h2>
+            </h1>
+            <AccentBorder />
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-14 md:gap-24">
                 {/* Phone and Email Div*/}
