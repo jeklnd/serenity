@@ -2,10 +2,10 @@ import React from "react";
 import { PhoneIcon, EnvelopeIcon, ClockIcon } from "@heroicons/react/24/solid";
 import AccentBorder from "./AccentBorder.jsx";
 
-export default function ContactInformation() {
+export default function ContactInformation({ classesFromParent }) {
     const divStyles = "flex flex-col gap-2 items-center";
-    const iconStyles = "h-8 w-8 text-sy-600";
-    const pStyles = "text-xl font-medium text-gray-700";
+    const iconStyles = "h-8 w-8 text-sy-500";
+    const pStyles = "text-xl font-medium";
     const weekdays = [
         "Monday",
         "Tuesday",
@@ -17,28 +17,29 @@ export default function ContactInformation() {
     ];
 
     return (
-        <section
-            id="contact-information"
-            className="bg-slate-400 py-16 relative flex flex-col items-center gap-8"
+        // <section
+        //     id="contact-information"
+        //     className="bg-slate-400 py-16 relative flex flex-col items-center gap-8"
+        // >
+        <div
+            className={`${classesFromParent} flex flex-col items-center gap-8`}
         >
-            <h1 className="text-3xl font-bold text-gray-700 text-center">
+            <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-center">
                 Contact Information
             </h1>
             <AccentBorder />
 
-            <div className="flex flex-col md:flex-row justify-center items-center gap-14 md:gap-24">
+            <div className="flex flex-col justify-center items-center gap-6 md:gap-8">
                 {/* Phone and Email Div*/}
-                <div className="flex flex-col gap-14 first:self-start">
-                    <div className={divStyles}>
-                        <PhoneIcon className={iconStyles} />
-                        <p className={pStyles}>610-613-4832</p>
-                    </div>
-                    <div className={divStyles}>
-                        <EnvelopeIcon className={iconStyles} />
-                        <p className={"text-lg font-medium text-gray-700"}>
-                            RKrensel@SerenityHomeRepair.com
-                        </p>
-                    </div>
+                <div className={divStyles}>
+                    <PhoneIcon className={iconStyles} />
+                    <p className={pStyles}>610-613-4832</p>
+                </div>
+                <div className={divStyles}>
+                    <EnvelopeIcon className={iconStyles} />
+                    <p className={"text-lg font-medium"}>
+                        RKrensel@SerenityHomeRepair.com
+                    </p>
                 </div>
 
                 {/* Hours of Operation Div*/}
@@ -51,10 +52,10 @@ export default function ContactInformation() {
                                     key={index}
                                     className="flex justify-between gap-16 md:gap-14 p-1"
                                 >
-                                    <p className="text-lg font-medium text-gray-700">
+                                    <p className="text-lg font-medium">
                                         {day}
                                     </p>
-                                    <p className="text-lg text-gray-600">
+                                    <p className="text-lg font-thin">
                                         9am &ndash; 5pm
                                     </p>
                                 </li>
@@ -63,6 +64,7 @@ export default function ContactInformation() {
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+        // </section>
     );
 }
