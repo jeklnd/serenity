@@ -12,24 +12,24 @@ export const couples = [
         before: stepsBefore,
         after: stepsAfter,
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor nunc, semper sit amet euismod ultricies, venenatis et libero. ",
+            "The deck was covered in a thick layer of green sludge, making it dangerous to walk on. However, help arrived in the form of Serenity Home Repair's powerwashing services. With powerful jets of water, the grime was blasted away, leaving the deck looking clean, fresh, and safe once again.",
     },
     {
         before: sillBefore,
         after: sillAfter,
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor nunc, semper sit amet euismod ultricies, venenatis et libero. ",
+            "The window sill had been neglected for years, causing it to rot and lose its paint. But with the arrival of Serenity Home Repairs, the damaged area was soon patched up and given a fresh coat of paint. Now the window sill looked as good as new, adding to the beauty of the home.",
     },
     {
         before: doorBefore,
         after: doorAfter,
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor nunc, semper sit amet euismod ultricies, venenatis et libero. ",
+            "The door of the old house had seen better days, with mold growing on it and rusty hinges creaking with every movement. However, with a few simple repairs, the door was given a new lease of life. The hinges were replaced, the mold was scrubbed away, and a fresh coat of paint was applied, leaving the door looking as good as new.",
     },
     {
         before: houseBefore,
         after: houseAfter,
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor nunc, semper sit amet euismod ultricies, venenatis et libero. ",
+            "The fence beneath the house had broken segments, peeling paint, and significant portions missing. Serenity Home Repair came to the rescue, replacing the missing segments and repainting the fence to make it look as good as new. ",
     },
 ];
