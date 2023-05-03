@@ -1,6 +1,6 @@
 import sg from "@sendgrid/mail";
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
     sg.setApiKey(process.env.SENDGRID_API_KEY);
     const body = req.body;
     const date = new Date();
@@ -18,9 +18,11 @@ export default function handler(req, res) {
         Your truly,<br/>
         SerenityHomeRepair.com</p>`,
     };
-    sg.send(message)
+    await sg
+        .send(message)
         .then(() => {
             console.log("Sent message");
+            // res.status(200).json({message: "Email sent successfully."})
             res.redirect("/", 200);
         })
         .catch((error) => {
@@ -29,7 +31,6 @@ export default function handler(req, res) {
             if (error.response) {
                 console.error(error.response.body);
             }
-
             res.status(500).send("Failed to send email");
         });
 }
