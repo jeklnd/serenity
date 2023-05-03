@@ -6,22 +6,22 @@ import { useRouter } from "next/router";
 export default function TextStack() {
     const router = useRouter();
     return (
-        <div className="flex flex-col gap-7 text-center sm:text-left max-w-[22rem] sm:max-w-[32rem] py-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl  text-gray-800 font-bold leading-10 ">
+        <div className="flex flex-col gap-8 lg:gap-12 text-center sm:text-left max-w-[22rem] sm:max-w-[32rem] lg:max-w-[38rem] py-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl  text-gray-800 font-bold leading-10 ">
                 Bring{" "}
-                <span className="underline decoration-sy-700 whitespace-nowrap">
+                <span className="underline decoration-sy-500 whitespace-nowrap">
                     peace of mind
                 </span>{" "}
                 <br />
                 to your home with{" "}
                 <span className="whitespace-nowrap">Serenity Home Repair</span>.
             </h1>
-            <p className="text-xl text-gray-600 leading-6 sm:text-2xl lg:text-3xl ">
+            <p className="text-xl text-gray-600 leading-6 sm:text-2xl lg:text-4xl ">
                 We handle all your home repair needs so you don&apos;t have to.
             </p>
             <RequestQuoteBtn
                 text={"View Services"}
-                oneOffClasses="self-center sm:self-start"
+                oneOffClasses="self-center sm:self-start lg:text-xl"
                 onClick={() => router.push("/services")}
             />
         </div>
