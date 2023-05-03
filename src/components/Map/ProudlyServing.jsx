@@ -19,7 +19,7 @@ export default function ProudlyServing() {
                     className="border-0 w-full"
                     loading="lazy"
                     allowFullScreen
-                    src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfad1ODq8xokRFap-dkA7Z7k&key=${process.env.GOOGLE_MAPS_EMBED_API_KEY}`}
+                    src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfad1ODq8xokRFap-dkA7Z7k&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
                 ></iframe>
             </div>
         </div>
