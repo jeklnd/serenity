@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import NavBar from "@/components/NavBar/NavBar.jsx";
 import HeroSection from "@/components/HeroSection/HeroSection.jsx";
 import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider.jsx";
@@ -8,8 +6,6 @@ import ProudlyServing from "@/components/Map/ProudlyServing.jsx";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     return (
