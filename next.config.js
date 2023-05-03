@@ -17,15 +17,15 @@ const nextConfig = {
     //         },
     //     ];
     // },
-    async redirects() {
-        return [
-            {
-                source: "/api/send-email",
-                destination: "/",
-                permanent: true,
-            },
-        ];
-    },
+    // async redirects() {
+    //     return [
+    //         {
+    //             source: "/api/send-email",
+    //             destination: "/",
+    //             permanent: true,
+    //         },
+    //     ];
+    // },
 };
 
 module.exports = nextConfig;
