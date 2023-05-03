@@ -19,7 +19,7 @@ export default function NavFooter() {
                     (href === "/home" && path === "/") ||
                     (href === "/home" && path === "/success")
                 }
-                className="p-1 text-center text-[#54575a] data-[active=true]:text-gray-400 data-[active=true]:font-medium hover:text-gray-500 transition tracking-wider sm:px-2 md:px-3"
+                className="text-lg lg:text-2xl md:text-xl p-1 text-center text-[#54575a] data-[active=true]:text-gray-400 data-[active=true]:font-medium hover:text-gray-500 transition tracking-wider sm:px-2 md:px-3"
             >
                 <Link href={href !== "/home" ? href : "/"}>
                     {page.toUpperCase()}
