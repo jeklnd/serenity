@@ -1,6 +1,6 @@
 import sg from "@sendgrid/mail";
 
-export default async function handler(req, res) {
+export async function handler(req, res) {
     sg.setApiKey(process.env.SENDGRID_API_KEY);
     const body = req.body;
     const date = new Date();
