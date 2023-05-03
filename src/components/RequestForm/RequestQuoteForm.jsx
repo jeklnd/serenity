@@ -22,12 +22,6 @@ export default function RequestQuoteForm({ isInDropdown = false, id }) {
         });
     };
 
-    const reveal = () => {
-        setIsVisible(true);
-        const timeoutID = setTimeout(() => setIsVisible(false), 5000);
-        clearTimeout(timeoutID);
-    };
-
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const form = document.getElementById(`form-${id}`);
@@ -44,7 +38,6 @@ export default function RequestQuoteForm({ isInDropdown = false, id }) {
                     draft[item] = "";
                 }
             });
-            reveal();
         } else {
             setSuccessfulSubmission(false);
         }
@@ -167,12 +160,6 @@ export default function RequestQuoteForm({ isInDropdown = false, id }) {
                             data-sitekey={process.env.RECAPTCHA_SITE_KEY}
                         ></div>
                     </div> */}
-                    <p
-                        data-visible={isVisible}
-                        className="hidden data-[visible=true]:block peer text-green-700 text-center font-medium"
-                    >
-                        Success! Your message has been sent.
-                    </p>
                     <RequestQuoteBtn
                         text="Submit Request"
                         onClick={handleFormSubmit}
