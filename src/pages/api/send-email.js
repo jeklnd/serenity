@@ -23,8 +23,8 @@ export default async function handler(req, res) {
         .then(() => {
             console.log("Sent message");
             // res.status(200).json({message: "Email sent successfully."})
-            res.status(200).send("Email sent successfully")
-            // res.redirect("/", 302);
+            // res.status(200).send("Email sent successfully")
+            res.redirect("/", 303);
         })
         .catch((error) => {
             console.error(error);
