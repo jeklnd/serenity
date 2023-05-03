@@ -24,7 +24,7 @@ export default async function handler(req, res) {
             console.log("Sent message");
             // res.status(200).json({message: "Email sent successfully."})
             // res.status(200).send("Email sent successfully")
-            res.redirect(303, "/");
+            res.redirect(303, "/success");
         })
         .catch((error) => {
             console.error(error);
