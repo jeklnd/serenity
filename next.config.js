@@ -4,16 +4,25 @@ const nextConfig = {
     images: {
         domains: ["picsum.photos"],
     },
-    async headers() {
+    // async headers() {
+    //     return [
+    //         {
+    //             source: "/api/send-email",
+    //             headers: [
+    //                 {
+    //                     key: "Allow",
+    //                     value: "POST",
+    //                 },
+    //             ],
+    //         },
+    //     ];
+    // },
+    async redirects() {
         return [
             {
                 source: "/api/send-email",
-                headers: [
-                    {
-                        key: "Allow",
-                        value: "POST",
-                    },
-                ],
+                destination: "/",
+                permanent: true,
             },
         ];
     },
