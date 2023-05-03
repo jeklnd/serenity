@@ -15,7 +15,9 @@ export default function NavFooter() {
             <li
                 key={index}
                 data-active={
-                    href === path || (href === "/home" && path === "/")
+                    href === path ||
+                    (href === "/home" && path === "/") ||
+                    (href === "/home" && path === "/success")
                 }
                 className="p-1 text-center text-[#54575a] data-[active=true]:text-gray-400 data-[active=true]:font-medium hover:text-gray-500 transition tracking-wider sm:px-2 md:px-3"
             >
@@ -36,7 +38,9 @@ export default function NavFooter() {
                         className="object-contain"
                     />
                 </a>
-                <ul className="flex flex-col sm:flex-row sm:items-center">{pagesListItems}</ul>
+                <ul className="flex flex-col sm:flex-row sm:items-center">
+                    {pagesListItems}
+                </ul>
             </div>
         </section>
     );
