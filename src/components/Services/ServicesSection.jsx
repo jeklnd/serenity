@@ -5,37 +5,49 @@ import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 import ServicesSlider from "./ServicesSlider.jsx";
 import ServicesBullets from "./ServicesBullets.jsx";
 import { rooms } from "./data.js";
+import styles from "./ServiceBullets.module.css";
 
 export default function ServiceSection({ heading }) {
     const [selectedSide, setSelectedSide] = useState("left");
 
     const roomsListItems = rooms.map((room, index) => {
         return (
-            <li key={index} className="relative group">
-                {/* <div className="z-10 text-3xl font-extrabold tracking-wide text-gray-700 relative text-center bg-gray-200 group-hover:hidden">
-                    <h1 className="inline  ">{room.room}</h1>
-                </div> */}
+            <li key={index} className="relative group max-w-[460px] bg-slate-300">                
+                {/* Card Heading */}
+                <div
+                    className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-sm z-10`}
+                >
+                    <div className="mx-auto text-3xl text-gray-700">
+                        {room.icon}
+                    </div>
+                    <h2 className="text-xl lg:text-2xl font-medium text-gray-700 text-center">
+                        {room.room}
+                    </h2>
 
+                    <div className="w-12 border-2 border-gray-700/75 self-center absolute bottom-0"></div>
+                </div>
+
+                {/* Card Background Image*/}
                 <Image
                     src={room.image}
                     alt={`Image of ${room.room}`}
                     fill
-                    className="absolute object-cover rounded-sm group-hover:brightness-150 group-hover:opacity-25 transition"
+                    className="absolute object-cover rounded-sm group-hover:opacity-0 transition"
                 />
+
+                {/* Card Body Text and Button */}
                 <div className="flex items-stretch relative aspect-square cursor-pointer">
-                    <div className="z-10 p-8 opacity-0 group-hover:opacity-100 flex flex-col justify-around">
-                        <h1 className="text-3xl font-bold text-gray-900">
-                            {room.room}
-                        </h1>
-                        <p className="text-lg font-normal text-gray-900">
+                    <div className="z-10 p-8 opacity-0 group-hover:opacity-100 transition flex flex-col justify-around">
+                        <p className="text-lg min-[375px]:text-2xl lg:text-3xl ">
                             {room.text}
                         </p>
+                        
                         <button
                             type="button"
-                            className="text-left font-medium text-md text-gray-700 border-2 bg-gray-200/25 border-gray-700 mx-auto px-2 py-1 hover:shadow-sm hover:bg-gray-200/85 hover:text-gray-800 hover:border-gray-800 transition rounded-sm"
+                            className="self-center w-fit font-extrabold text-gray-800 bg-sy-500 px-4 py-2 my-2 rounded-sm text-sm sm:text-md lg:text-lg border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
                         >
-                            <Link href="/services">
-                                View Services{" "}
+                            <Link href="/contact">
+                                Request Service{" "}
                                 <ArrowSmallRightIcon className="inline h-5 w-5" />
                             </Link>
                         </button>
@@ -48,6 +60,7 @@ export default function ServiceSection({ heading }) {
     return (
         <section id="services" className="bg-slate-400">
             <div className="container mx-auto flex flex-col items-center px-2 py-14 gap-8">
+                {/* Section Heading */}
                 <div className="text-center">
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-700 mb-2 text-center">
                         {heading}
@@ -56,20 +69,22 @@ export default function ServiceSection({ heading }) {
                         View our list of offerings by service or room.
                     </p>
                 </div>
+
+                {/* Slider */}
                 <ServicesSlider
                     selectedSide={selectedSide}
                     setSelectedSide={setSelectedSide}
                 />
 
-                {/* By Room*/}
+                {/* "Room" Slider Tab */}
                 <ul
                     data-selected={selectedSide}
-                    className="hidden data-[selected='right']:grid grid-cols-1 max-w-[400px] sm:grid-cols-2 sm:max-w-[980px] gap-6"
+                    className="hidden data-[selected='right']:grid grid-cols-1 sm:grid-cols-2  gap-6"
                 >
                     {roomsListItems}
                 </ul>
 
-                {/* By Service*/}
+                {/* "Service" Slider Tab */}
 
                 <div
                     data-selected={selectedSide}
