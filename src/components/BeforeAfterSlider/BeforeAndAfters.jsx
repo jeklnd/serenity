@@ -19,6 +19,7 @@ export default function BeforeAfterSlider() {
                             src={couple.before}
                             alt=""
                             className="rounded-sm"
+                            priority={index < 2}
                         />
                     </div>
                     <div>
@@ -27,6 +28,7 @@ export default function BeforeAfterSlider() {
                             src={couple.after}
                             alt=""
                             className="rounded-sm"
+                            priority={index < 2}
                         />
                     </div>
                 </figure>
