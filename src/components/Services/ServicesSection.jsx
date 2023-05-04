@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
-// import ServicesHeading from "./ServicesHeading.jsx";
 import ServicesSlider from "./ServicesSlider.jsx";
 import ServicesBullets from "./ServicesBullets.jsx";
 import { rooms } from "./data.js";
@@ -54,8 +53,7 @@ export default function ServiceSection({ heading }) {
                         {heading}
                     </h1>
                     <p className="text-xl lg:text-2xl text-gray-600 text-center">
-                        View our list of offerings by service or
-                        room.
+                        View our list of offerings by service or room.
                     </p>
                 </div>
                 <ServicesSlider
