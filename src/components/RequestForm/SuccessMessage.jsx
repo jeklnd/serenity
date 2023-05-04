@@ -13,9 +13,9 @@ export default function SuccessMessage() {
     return (
         <div
             data-visible={isVisible}
-            className=" bg-gray-100 p-2 shadow-sm w-screen text-center mx-auto -translate-y-full data-[visible=true]:translate-y-0 transition absolute "
+            className=" bg-gray-200 p-2 shadow-md w-screen text-center mx-auto -translate-y-full data-[visible=true]:translate-y-0 transition absolute "
         >
-                <p className="text-green-700 font-medium">
+                <p className="text-green-700 tracking-wide text-lg sm:text-xl font-medium">
                     Success! Your email has been sent.
                 </p>
            
