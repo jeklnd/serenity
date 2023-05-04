@@ -34,6 +34,7 @@ export default function About() {
                             src={aboutUsImage}
                             alt="image of Robert"
                             className="rounded-md object-contain order-t-2 border-gray-300/50 shadow-lg"
+                            priority
                         ></Image>
                     </div>
 
@@ -49,7 +50,7 @@ export default function About() {
                             </h1>
                         </div>
 
-                        <p className="p-2 sm:p-4 sm:pt-2 xl:px-6 2xl:p-8 2xl:pt-4 text-gray-500 text-lg lg:text-xl 2xl:text-2xl leading-12 tracking-wide px-2 first-letter:text-3xl first-letter:sm:text-4xl first-letter:lg:text-5xl first-letter:font-normal">
+                        <div className="p-2 sm:p-4 sm:pt-2 xl:px-6 2xl:p-8 2xl:pt-4 text-gray-500 text-lg lg:text-xl 2xl:text-2xl leading-12 tracking-wide px-2 first-letter:text-3xl first-letter:sm:text-4xl first-letter:lg:text-5xl first-letter:font-normal">
                             <span className="uppercase font-medium text-gray-600">
                                 Serenity Home Repair
                             </span>{" "}
@@ -64,7 +65,7 @@ export default function About() {
                             exceeds your expectations. Contact Serenity Home
                             Repair today to schedule a consultation and let us
                             take care of all your home repair needs.
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div className="w-full">
