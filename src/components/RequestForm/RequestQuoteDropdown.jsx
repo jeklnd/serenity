@@ -7,9 +7,9 @@ export default function RequestQuoteDropdown({ isDroppedDown}) {
     return (
         <div
             data-open={isDroppedDown}
-            className="-translate-y-full data-[open=true]:translate-y-0 transition flex justify-center sm:px-4 items-start bg-gray-300 h-fit w-screen absolute z-0 sm:bg-transparent overflow-y-scroll min-h-0"
+            className=" sm:px-4 -translate-y-full data-[open=true]:translate-y-0 transition flex justify-center items-start bg-transparent h-fit w-screen absolute z-0 sm:bg-transparent"
         >
-            <div className="sm:py-10 sm:px-2 relative bg-gray-300 my-6 sm:m-4 rounded-md">
+            <div className="py-6 sm:py-10 px-2 relative bg-gray-300 sm:my-6 sm:m-4 rounded-b-md sm:rounded-md">
                 <RequestQuoteForm isInDropdown={true} id={id} heading="Request Quote"/>
             </div>
         </div>
