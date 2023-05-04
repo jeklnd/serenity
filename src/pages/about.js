@@ -32,7 +32,7 @@ export default function About() {
                         <Image
                             src={aboutUsImage}
                             alt="image of Robert"
-                            className="rounded-md object-contain order-t-2 border-gray-300/50 shadow-md "
+                            className="rounded-md object-contain order-t-2 border-gray-300/50 shadow-lg"
                         ></Image>
                     </div>
 
