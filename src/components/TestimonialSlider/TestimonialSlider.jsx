@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { testimonials } from "./data.js";
 import Heading from "./TestimonialHeading.jsx";
 import { LeftArrow, RightArrow } from "./CarouselArrows.jsx";
 import TestimonialBio from "./TestimonialBio.jsx";
 import CarouselDots from "./CarouselDots.jsx";
 import QuotationMark from "./QuotationMark.jsx";
+import styles from "./TestimonialSlider.module.css";
 
 export default function TestimonialSlider() {
     const [isVisibleIndex, setIsVisibleIndex] = useState(0);
@@ -32,7 +32,7 @@ export default function TestimonialSlider() {
     return (
         <section
             id="testimonials"
-            className="bg-sy-400/80 px-4 py-14 min-h-[42rem] sm:min-h-[24rem]"
+            className={`px-4 py-14 min-h-[42rem] sm:min-h-[24rem] ${styles.bg}`}
         >
             <Heading />
             <div className="container mx-auto flex justify-center items-stretch text-center max-w-xl sm:min-h-[20rem]">
@@ -60,7 +60,7 @@ export default function TestimonialSlider() {
                             >
                                 <div className="flex [&>*:last-child]:self-end">
                                     <QuotationMark />
-                                    <p className="text-sm font-normal text-gray-600 sm:text-md italic">
+                                    <p className="text-sm min-[425px]:text-lg lg:text-xl font-normal text-gray-600  italic">
                                         {testimonial.text}
                                     </p>
                                     <QuotationMark />
