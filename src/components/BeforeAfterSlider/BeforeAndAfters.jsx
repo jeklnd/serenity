@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function BeforeAfterSlider() {
     const heading_styles =
-        "text-xl sm:text-xl md:text-2xl lg:text-4xl p-2 font-bold tracking-widest text-gray-700";
+        "text-xl sm:text-xl md:text-2xl lg:text-4xl p-2 sm:p-4 lg:p-6 font-bold tracking-widest text-gray-700";
     const beforeAfterListItems = couples.map((couple, index) => {
         return (
             <li key={index}>
