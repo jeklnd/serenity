@@ -8,8 +8,7 @@ export default function ProudlyServing() {
                     Proudly serving
                 </h2>
                 <p className="text-xl lg:text-2xl text-gray-700">
-                    Serenity Home Repair caters to all Montgomery and
-                    Philadelphia County postal codes.
+                    Serenity Home Repair caters to all postal codes across southeastern PA and beyond.
                 </p>
             </div>
             <div className="flex justify-center bg-transparent w-full relative">
@@ -21,7 +20,7 @@ export default function ProudlyServing() {
                     className="border-0 w-full z-10 my-10 lg:mb-0 shadow-md lg:h-[600px]"
                     loading="lazy"
                     allowFullScreen
-                    src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfad1ODq8xokRFap-dkA7Z7k&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
+                    src={`https://www.google.com/maps/embed/v1/view?zoom=9&center=40.1144,-75.3376&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
                 ></iframe>
             </div>
         </div>
