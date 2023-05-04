@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export default function NavSidebar({ isOpen, onToggleMenu }) {
     const router = useRouter();
-    const [isActive, setIsActive] = useState(router.pathname);
+    const [isActiveRoute, setIsActiveRoute] = useState(router.pathname);
     const [xPosition, setXPosition] = useState(null);
     const handleSwipe = (e) => {
         e.changedTouches[0].clientX < xPosition && onToggleMenu();
@@ -14,7 +14,7 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
         <>
             <div
                 data-isopen={isOpen}
-                className="-translate-x-full data-[isOpen=true]:translate-x-0 transition flex fixed top-0 left-0 h-screen w-screen overflow-hidden bg-slate-500 z-40 justify-center items-center "
+                className="-translate-x-full data-[isOpen=true]:translate-x-0 transition flex fixed top-0 left-0 h-screen w-screen overflow-hidden bg-slate-500 z-50 justify-center items-center "
                 onTouchStart={(e) => {
                     setXPosition(e.changedTouches[0].clientX);
                 }}
@@ -51,8 +51,10 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
                                     key={index}
                                     data-active={
                                         href !== "/home"
-                                            ? href === isActive
-                                            : isActive === "/"
+                                            ? href === isActiveRoute
+                                            : isActiveRoute === "/" ||
+                                              (href !== "/home" &&
+                                                  isActiveRoute === "/success")
                                     }
                                     className="p-4 tracking-widest  text-gray-700 data-[active=true]:text-gray-300 data-[active=true]:font-medium text-4xl"
                                     onClick={onToggleMenu}
