@@ -53,11 +53,11 @@ export default function RequestQuoteForm({
         "hidden data-[success=false]:peer-invalid:block text-xs text-left pl-1 text-red-700";
 
     return (
-        <div className="flex flex-col content-center flex-wrap px-2 w-fit mx-auto ">
+        <div className="flex flex-col content-center flex-wrap w-fit mx-auto ">
             <div className="max-w-md text-center">
                 <FormSubHeading heading={heading} />
                 <form id={`form-${id}`} action="/api/send-email" method="POST">
-                    <div className="flex flex-col p-2 gap-2 sm:flex-row ">
+                    <div className="flex flex-col p-2 gap-2 min-[370px]:flex-row ">
                         <div className="flex flex-col w-full sm:min-w-1/2">
                             <input
                                 type="text"
@@ -97,7 +97,7 @@ export default function RequestQuoteForm({
                         </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row px-2 pb-2 gap-2">
+                    <div className="flex flex-col min-[370px]:flex-row px-2 pb-2 gap-2">
                         <div className="flex flex-col w-full sm:min-w-1/2">
                             <input
                                 type="tel"
@@ -147,7 +147,7 @@ export default function RequestQuoteForm({
                                 onChange={handleFormInputChange}
                                 required
                                 data-success={successfulSubmission}
-                                rows={`${isInDropdown === true ? "4" : "10"}`}
+                                rows={`${isInDropdown === true ? "4" : "8"}`}
                                 className={input_styles}
                             ></textarea>
                             <p
@@ -169,7 +169,7 @@ export default function RequestQuoteForm({
                         onClick={handleFormSubmit}
                     />
 
-                    <div className="flex flex-row justify-center sm:px-2 sm:gap-2 items-center py-2">
+                    <div className="flex flex-row justify-center gap-2 items-center px-2">
                         <LockClosedIcon className="text-gray-500 h-[20px] w-[20px]" />
                         <p className="text-gray-500 text-xs sm:text-sm max-w-sm">
                             The security and privacy of your data is our top
