@@ -8,7 +8,7 @@ export default function FormHeading({ heading }) {
             </p>
             <p className="text-sm sm:text-lg text-gray-500 pb-2">
                 Submit your request and Serenity Home Repair will contact you
-                via phone or email in 24-48 hours.
+                via phone or email in 1-2 business days.
             </p>
         </div>
     );
