@@ -17,12 +17,8 @@ export default function ContactInformation({ classesFromParent }) {
     ];
 
     return (
-        // <section
-        //     id="contact-information"
-        //     className="bg-slate-400 py-16 relative flex flex-col items-center gap-8"
-        // >
         <div
-            className={`${classesFromParent} flex flex-col items-center gap-8`}
+            className={`flex flex-col items-center gap-8 ${classesFromParent} `}
         >
             <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-center">
                 Contact Information
@@ -52,9 +48,7 @@ export default function ContactInformation({ classesFromParent }) {
                                     key={index}
                                     className="flex justify-between gap-16 md:gap-14 p-1"
                                 >
-                                    <p className="text-lg font-medium">
-                                        {day}
-                                    </p>
+                                    <p className="text-lg font-medium">{day}</p>
                                     <p className="text-lg font-thin">
                                         9am &ndash; 5pm
                                     </p>
@@ -65,6 +59,5 @@ export default function ContactInformation({ classesFromParent }) {
                 </div>
             </div>
         </div>
-        // </section>
     );
 }
