@@ -17,7 +17,7 @@ export default function ServicesSlider({selectedSide, setSelectedSide}) {
     return (
         <>
             <div className="bg-slate-300 shadow-inner shadow-slate-400/40 rounded-full flex relative text-lg cursor-pointer">
-                {["Room", "Service"].map((category, index) => {
+                {["Service", "Room"].map((category, index) => {
                     return (
                         <div
                             key={index}
