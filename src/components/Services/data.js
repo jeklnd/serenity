@@ -7,6 +7,9 @@ import { MdElectricalServices } from "react-icons/md";
 import { MdKitchen } from "react-icons/md";
 import { MdYard } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+import { MdBed } from "react-icons/md";
+import { MdBathroom } from "react-icons/md";
+import { MdStairs } from "react-icons/md";
 
 export const rooms = [
     {
@@ -14,24 +17,28 @@ export const rooms = [
         image: "https://picsum.photos/200",
         text: "Bring serenity to the most peaceful room of the home with our full range of bedroom services.",
         image: bedroom,
+        icon: <MdBed />,
     },
     {
         room: "Bathroom",
         image: "https://picsum.photos/200",
         text: "Ready to replace the vanity? Retile the floor? Install a new toilet? Serenity Home Repair has you covered.",
         image: bathroom,
+        icon: <MdBathroom />,
     },
     {
         room: "Kitchen",
         image: "https://picsum.photos/200",
         text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind.",
         image: kitchen,
+        icon: <MdKitchen />,
     },
     {
         room: "Basement",
         image: "https://picsum.photos/200",
         text: "Bring tranquility to your home from the bottom up. Serenity Home Repair's basement services cover it all.",
         image: basement,
+        icon: <MdStairs />,
     },
 ];
 
