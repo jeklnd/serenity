@@ -33,6 +33,7 @@ export default function ServiceSection({ heading }) {
                     alt={`Image of ${room.room}`}
                     fill
                     className="absolute object-cover rounded-sm group-hover:opacity-0 transition"
+                    priority={index < 2}
                 />
 
                 {/* Card Body Text and Button */}
