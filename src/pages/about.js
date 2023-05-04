@@ -25,6 +25,7 @@ export default function About() {
                         <p className="text-gray-600 text-center text-xl lg:text-2xl ">
                             We are Serenity Home Repair.
                         </p>
+                        <AccentBorder classes="my-8 w-24" />
                     </div>
 
                     {/* Image */}
@@ -38,7 +39,9 @@ export default function About() {
 
                     {/* Description Heading and Body Text */}
                     <div className="flex flex-col rounded-sm bg-slate-200 w-fit self-center rounded-b-md xl:rounded-none xl:rounded-e-md shadow-sm max-lg:max-w-xl lg:max-w-3xl xl:basis-3/5">
-                        <div className={`${styles.bricks} p-1 sm:p-2 xl:p-6 2xl:p-6 flex items-center justify-center`}>
+                        <div
+                            className={`${styles.bricks} p-1 sm:p-2 xl:p-6 2xl:p-6 flex items-center justify-center`}
+                        >
                             <h1
                                 className={` hidden font-extrabold text-gray-700 xl:inline lg:self-center text-3xl sm:text-4xl xl:text-5xl`}
                             >
@@ -55,9 +58,7 @@ export default function About() {
                             services, including carpentry, plumbing, electrical,
                             and exterior home repair, our team of experts is
                             equipped to handle any project you have in mind.
-     
                             <AccentBorder classes="w-24 my-8 self-center text-center relative left-1/2 -translate-x-1/2 border-sy-500 " />
-
                             We take pride in providing exceptional customer
                             service and delivering high-quality workmanship that
                             exceeds your expectations. Contact Serenity Home
