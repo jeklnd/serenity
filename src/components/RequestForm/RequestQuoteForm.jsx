@@ -4,14 +4,18 @@ import FormSubHeading from "./FormSubHeading.jsx";
 import RequestQuoteBtn from "@/components/RequestForm/RequestQuoteBtn.jsx";
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 
-export default function RequestQuoteForm({ isInDropdown = false, id }) {
+export default function RequestQuoteForm({
+    isInDropdown = false,
+    id,
+    heading,
+}) {
     const [successfulSubmission, setSuccessfulSubmission] = useState(null);
     const [values, updateValue] = useImmer({
-        first: "asd",
-        last: "asd",
-        phone: "1231231231",
-        email: "asdf@asdf.com",
-        message: "asd",
+        first: "",
+        last: "",
+        phone: "",
+        email: "",
+        message: "",
     });
     const [isVisible, setIsVisible] = useState(false);
 
@@ -44,14 +48,14 @@ export default function RequestQuoteForm({ isInDropdown = false, id }) {
     };
 
     const input_styles =
-        "w-full sm:min-w-1/2 h-fit rounded-md p-1 placeholder:pl-2 placeholder:text-gray-400 shadow-inner data-[success=false]:invalid:border-2 data-[success=false]:invalid:border-red-500 peer";
+        "w-full sm:min-w-1/2 h-fit rounded-md p-1 placeholder: placeholder:text-gray-400 shadow-inner data-[success=false]:invalid:border-2 data-[success=false]:invalid:border-red-500 peer";
     const error_styles =
-        "hidden data-[success=false]:peer-invalid:block text-xs text-left pl-1 py-1 text-red-700";
+        "hidden data-[success=false]:peer-invalid:block text-xs text-left pl-1 text-red-700";
 
     return (
-        <div className="flex flex-col content-center flex-wrap px-2 w-fit mx-auto">
+        <div className="flex flex-col content-center flex-wrap px-2 w-fit mx-auto ">
             <div className="max-w-md text-center">
-                <FormSubHeading />
+                <FormSubHeading heading={heading} />
                 <form id={`form-${id}`} action="/api/send-email" method="POST">
                     <div className="flex flex-col p-2 gap-2 sm:flex-row ">
                         <div className="flex flex-col w-full sm:min-w-1/2">
@@ -130,7 +134,7 @@ export default function RequestQuoteForm({ isInDropdown = false, id }) {
                                 className={error_styles}
                                 data-success={successfulSubmission}
                             >
-                                Please input valid email address
+                                Please input valid email address.
                             </p>
                         </div>
                     </div>
@@ -165,9 +169,9 @@ export default function RequestQuoteForm({ isInDropdown = false, id }) {
                         onClick={handleFormSubmit}
                     />
 
-                    <div className="flex flex-row justify-center sm:px-2 sm:gap-2 items-center ">
+                    <div className="flex flex-row justify-center sm:px-2 sm:gap-2 items-center py-2">
                         <LockClosedIcon className="text-gray-500 h-[20px] w-[20px]" />
-                        <p className="text-gray-400 text-xs sm:text-sm max-w-sm">
+                        <p className="text-gray-500 text-xs sm:text-sm max-w-sm">
                             The security and privacy of your data is our top
                             priority. We never sell your information to
                             third-party companies.
