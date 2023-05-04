@@ -9,7 +9,7 @@ export default function ServicesCards() {
                 key={index}
             >
                 {/* Images */}
-                <div className="m-2 flex flex-col gap-2 rounded-sm shadow-md">
+                <div className="flex flex-col rounded-sm shadow-md h-full">
                     <div className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-sm`}>
                         <div className="mx-auto text-3xl text-gray-700">
                             {service.icon}
@@ -20,7 +20,7 @@ export default function ServicesCards() {
 
                         <div className="w-12 border-2 border-gray-700/75 self-center absolute bottom-0"></div>
                     </div>
-                    <ul className="p-2">
+                    <ul className="p-2 bg-gray-200 grow">
                         {service.listItems.map((listItem, i) => {
                             return (
                                 <li
@@ -41,7 +41,7 @@ export default function ServicesCards() {
 
     return (
         <div className="container mx-auto flex justify-center py-8">
-            <ul className=" grid md:grid-cols-2 justify-center flex-wrap gap-8">
+            <ul className=" grid md:grid-cols-2 justify-center flex-wrap gap-4">
                 {servicesListItems}
             </ul>
         </div>
