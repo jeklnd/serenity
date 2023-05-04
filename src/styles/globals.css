@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    -webkit-tap-highlight-color: transparent;
-  }
+    html {
+        -webkit-tap-highlight-color: transparent;
+        min-height: 100vh
+    }
 }
+
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -37,4 +39,3 @@ body {
     display: flex;
     flex-direction: column;
 }
-
