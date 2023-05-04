@@ -7,7 +7,7 @@ import ImageGallery from "@/components/ImageGallery/ImageGallery.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
 
-export default function about() {
+export default function Work() {
     return (
         <>
             <header className="sticky top-0 z-40">

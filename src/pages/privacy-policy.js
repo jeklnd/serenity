@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Privacy() {
+export default function PrivacyPolicy() {
     return (
         <div className="flex justify-center p-2">
             <style

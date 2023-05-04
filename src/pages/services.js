@@ -5,7 +5,7 @@ import ContactSection from "@/components/Contact/ContactSection.jsx";
 import NavFooter from "@/components/Footers/NavFooter.jsx";
 import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
 
-export default function services() {
+export default function Services() {
     return (
         <>
             <header className="sticky top-0 z-40">
