@@ -19,7 +19,7 @@ export default function NavBar() {
     };
     return (
         <>
-            <nav className="bg-gray-200 drop-shadow-md z-50 relative">
+            <nav className="bg-gray-200 drop-shadow-md z-40 relative">
                 <div className="fixed top-0 w-screen border-2 border-sy-500"></div>
 
                 <div className="container mx-auto flex justify-between items-center p-4 gap-4">
@@ -29,18 +29,20 @@ export default function NavBar() {
                     </div>
                     <NavLinks />
                     <div className="flex flex-col gap-2 text-center">
-                        <p className="font-bold text-gray-700 text-sm">
+                        <p className="font-bold text-gray-700 text-sm lg:text-xl">
                             610-613-4832
                         </p>
                         <RequestQuoteBtn
                             text="Request Quote"
+                            oneOffClasses="lg:text-xl"
                             onClick={handleButtonClick}
                         />
                     </div>
                 </div>
                 <NavSidebar isOpen={isOpen} onToggleMenu={handleClick} />
+                
             </nav>
-            <RequestQuoteDropdown isDroppedDown={isDroppedDown} />
+            <RequestQuoteDropdown isDroppedDown={isDroppedDown}/>
             <Backdrop isVisible={isDroppedDown} onClick={handleButtonClick}/>
         </>
     );
