@@ -4,9 +4,10 @@ import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 // import ServicesHeading from "./ServicesHeading.jsx";
 import ServicesSlider from "./ServicesSlider.jsx";
+import ServicesBullets from "./ServicesBullets.jsx";
 import { rooms } from "./data.js";
 
-export default function ServiceSection() {
+export default function ServiceSection({ heading }) {
     const [selectedSide, setSelectedSide] = useState("left");
 
     const roomsListItems = rooms.map((room, index) => {
@@ -46,15 +47,15 @@ export default function ServiceSection() {
     });
 
     return (
-        <section id="services" className="bg-gray-200">
-            <div className="container mx-auto flex flex-col items-center px-4 py-14 gap-8">
+        <section id="services" className="bg-slate-400">
+            <div className="container mx-auto flex flex-col items-center px-2 py-14 gap-8">
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold text-gray-700 mb-2 text-center">
-                        How we help
-                    </h2>
-                    <p className="text-xl text-gray-600 text-center">
-                        View our list of handyman service offerings by room or
-                        service.
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-700 mb-2 text-center">
+                        {heading}
+                    </h1>
+                    <p className="text-xl lg:text-2xl text-gray-600 text-center">
+                        View our list of offerings by service or
+                        room.
                     </p>
                 </div>
                 <ServicesSlider
@@ -65,18 +66,19 @@ export default function ServiceSection() {
                 {/* By Room*/}
                 <ul
                     data-selected={selectedSide}
-                    className="hidden data-[selected='left']:grid grid-cols-1 max-w-[400px] sm:grid-cols-2 sm:max-w-[980px] gap-6"
+                    className="hidden data-[selected='right']:grid grid-cols-1 max-w-[400px] sm:grid-cols-2 sm:max-w-[980px] gap-6"
                 >
                     {roomsListItems}
                 </ul>
 
                 {/* By Service*/}
-                <ul
+
+                <div
                     data-selected={selectedSide}
-                    className="hidden data-[selected='right']:grid grid-cols-1 max-w-[400px] sm:grid-cols-2 sm:max-w-[980px] gap-6"
+                    className="hidden data-[selected='left']:block"
                 >
-                    {roomsListItems}
-                </ul>
+                    <ServicesBullets />
+                </div>
             </div>
         </section>
     );
