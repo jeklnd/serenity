@@ -13,7 +13,7 @@ export default function NavLinks() {
         return (
             <li
                 key={index}
-                className="p-2 tracking-wider text-gray-500 data-[active=true]:text-gray-700 hover:text-gray-700 data-[active=true]:font-medium sm:text-md md:text-lg lg:text-xl"
+                className="p-2 tracking-wider text-gray-500 data-[active=true]:text-gray-700 hover:text-gray-700 data-[active=true]:font-medium sm:text-md md:text-xl lg:text-2xl"
                 data-active={href === isActive}
             >
                 <Link href={href}>{pageName}</Link>
