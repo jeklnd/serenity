@@ -16,7 +16,7 @@ export default function Home() {
             <main className="grow flex flex-col justify-around">
                 <HeroSection />
                 <TestimonialSlider />
-                <ServicesSection />
+                <ServicesSection heading="How we help" />
                 <ProudlyServing />
                 <ContactSection />
             </main>
