@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useImmer } from "use-immer";
 import FormSubHeading from "./FormSubHeading.jsx";
-import RequestQuoteBtn from "@/components/RequestForm/RequestQuoteBtn.jsx";
+import SolidYellowButton from "@/components/Buttons/SolidYellowButton.jsx";
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 
 export default function RequestQuoteForm({
@@ -164,8 +164,9 @@ export default function RequestQuoteForm({
                             data-sitekey={process.env.RECAPTCHA_SITE_KEY}
                         ></div>
                     </div> */}
-                    <RequestQuoteBtn
-                        text="Submit Request"
+                    <SolidYellowButton
+                        buttonText="Submit Request"
+                        className=""
                         onClick={handleFormSubmit}
                     />
 
