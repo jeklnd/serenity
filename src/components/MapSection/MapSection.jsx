@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProudlyServing() {
+export default function MapSection() {
     return (
         <div className=" bg-slate-500 pt-16 flex flex-col relative">
             <div className="container mx-auto text-center px-2">
@@ -8,7 +8,8 @@ export default function ProudlyServing() {
                     Proudly serving
                 </h2>
                 <p className="text-xl lg:text-2xl text-gray-700">
-                    Serenity Home Repair caters to all postal codes across southeastern PA and beyond.
+                    Serenity Home Repair caters to all postal codes across
+                    southeastern PA and beyond.
                 </p>
             </div>
             <div className="flex justify-center bg-transparent w-full relative">
