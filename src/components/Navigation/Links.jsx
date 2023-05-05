@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function NavLinks() {
+export default function Links() {
     const router = useRouter();
     const [isActive, setIsActive] = useState(router.pathname);
 
