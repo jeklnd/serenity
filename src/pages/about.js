@@ -35,6 +35,7 @@ export default function About() {
                             alt="image of Robert"
                             className="rounded-md object-contain order-t-2 border-gray-300/50 shadow-lg"
                             priority
+                            sizes="100vw"
                         ></Image>
                     </div>
 

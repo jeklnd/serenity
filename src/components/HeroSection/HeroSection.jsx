@@ -12,6 +12,7 @@ export default function HeroSection() {
                 className="object-cover brightness-150 opacity-25"
                 fill
                 priority
+                sizes="100vw"
             />
 
             <div className="container mx-auto flex flex-col sm:flex-row justify-around items-center p-4 gap-24 sm:gap-8 relative my-28">

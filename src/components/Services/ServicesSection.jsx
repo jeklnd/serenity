@@ -12,7 +12,10 @@ export default function ServiceSection({ heading }) {
 
     const roomsListItems = rooms.map((room, index) => {
         return (
-            <li key={index} className="relative group max-w-[460px] bg-slate-300">                
+            <li
+                key={index}
+                className="relative group max-w-[460px] bg-slate-300"
+            >
                 {/* Card Heading */}
                 <div
                     className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-sm z-10`}
@@ -34,6 +37,7 @@ export default function ServiceSection({ heading }) {
                     fill
                     className="absolute object-cover rounded-sm group-hover:opacity-0 transition"
                     priority={index < 2}
+                    sizes="(max-width: 640px) 100vw, 50vw"
                 />
 
                 {/* Card Body Text and Button */}
@@ -42,7 +46,7 @@ export default function ServiceSection({ heading }) {
                         <p className="text-lg min-[375px]:text-2xl lg:text-3xl ">
                             {room.text}
                         </p>
-                        
+
                         <button
                             type="button"
                             className="self-center w-fit font-extrabold text-gray-800 bg-sy-500 px-4 py-2 my-2 rounded-sm text-sm sm:text-md lg:text-lg border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"

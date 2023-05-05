@@ -20,6 +20,7 @@ export default function BeforeAfterSlider() {
                             alt=""
                             className="rounded-sm"
                             priority={index < 2}
+                            sizes="(max-width: 400px) 50vw, 100vw"
                         />
                     </div>
                     <div>
