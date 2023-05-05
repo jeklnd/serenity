@@ -1,9 +1,5 @@
 import React from "react";
-import localFont from "next/font/local";
-
-const spaceGrotesque = localFont({
-    src: "SpaceGrotesk.ttf",
-});
+import { spaceGrotesque } from "@/utils/fonts/loadFonts.js";
 
 export default function QuotationMark({ className }) {
     return (
