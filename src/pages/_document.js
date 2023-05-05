@@ -12,6 +12,7 @@ export default function Document() {
                     data-website-uuid="13388011-6506-4da0-b438-9aa79e263552"
                     defer
                 />
+                <link rel="icon" ttype="image/x-icon" href="assets/favicon.ico" />
             </Head>
             <body>
                 <Main />
