@@ -1,3 +1,4 @@
+import Head from "next/head";
 import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import SuccessMessage from "@/components/RequestForm/SuccessMessage.jsx";
 import HeroSection from "@/components/HeroSection/HeroSection.jsx";
@@ -10,6 +11,9 @@ import Footer from "@/components/Footers/Footer.jsx";
 export default function Success() {
     return (
         <>
+            <Head>
+                <title>Serenity Home Repair</title>
+            </Head>
             <header className="sticky top-0 z-40">
                 <NavigationBar />
                 <SuccessMessage />

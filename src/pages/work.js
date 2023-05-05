@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import AccentBorder from "@/components/Contact/AccentBorder.jsx";
 import BeforeAndAfters from "@/components/BeforeAfterSlider/BeforeAndAfters.jsx";
@@ -8,6 +9,9 @@ import Footer from "@/components/Footers/Footer.jsx";
 export default function Work() {
     return (
         <>
+            <Head>
+                <title>Work</title>
+            </Head>
             <header className="sticky top-0 z-40">
                 <NavigationBar />
             </header>

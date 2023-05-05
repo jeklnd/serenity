@@ -1,3 +1,4 @@
+import Head from "next/head";
 import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import HeroSection from "@/components/HeroSection/HeroSection.jsx";
 import TestimonialSection from "@/components/Testimonials/TestimonialSection.jsx";
@@ -9,6 +10,9 @@ import Footer from "@/components/Footers/Footer.jsx";
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Serenity Home Repair</title>
+            </Head>
             <header className="sticky top-0 z-40">
                 <NavigationBar />
             </header>

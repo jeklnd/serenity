@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import AccentBorder from "@/components/Contact/AccentBorder";
 import Image from "next/image";
@@ -10,6 +11,9 @@ import styles from "@/components/Services/ServiceBullets.module.css";
 export default function About() {
     return (
         <>
+            <Head>
+                <title>About</title>
+            </Head>
             <header className="sticky top-0 z-40">
                 <NavigationBar />
             </header>
