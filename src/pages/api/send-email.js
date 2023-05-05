@@ -8,8 +8,8 @@ export default async function handler(req, res) {
     const message = {
         to: "serenityhomerepair2534@gmail.com",
         from: "serenityhomerepair2534@gmail.com",
-        subject: `New Lead – ${today}`,
-        html: `<h2>New Lead – ${today}</h2>
+        subject: `New Lead: ${body.first} ${body.last} – ${today}`,
+        html: `<h2>New Lead: ${body.first} ${body.last} – ${today}</h2>
         <p>A lead submitted the following information:<br/><br/>
         First: <strong>${body.first}</strong> <br/>
         Last: <strong>${body.last}</strong><br/>
