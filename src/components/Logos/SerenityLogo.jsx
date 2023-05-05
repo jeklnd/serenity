@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "public/assets/logo.svg";
 
-export default function Logo() {
+export default function SerenityLogo({ className = "" }) {
     return (
-        <Link href="/" className="relative h-[4.5rem] w-[4.5rem] lg:h-28 lg:w-28">
+        <Link href="/" className={className}>
             <Image
                 src={logo}
                 alt="Serenity Home Repair"
