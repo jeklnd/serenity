@@ -38,9 +38,12 @@ export default function ServicesCards() {
                     </ul>
                     <button
                         type="button"
-                        className="self-center w-fit font-extrabold text-gray-800 bg-sy-500 px-4 py-2 mt-6 mb-8 rounded-sm text-sm sm:text-md lg:text-lg border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                        className="sm:self-center text-center w-fit mt-6 mb-8 font-extrabold text-gray-800 text-sm sm:text-md lg:text-lg "
                     >
-                        <Link href="/contact">
+                        <Link
+                            href="/contact"
+                            className="block px-4 py-2  bg-sy-500 rounded-sm border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                        >
                             Request Service{" "}
                             <ArrowSmallRightIcon className="inline h-5 w-5" />
                         </Link>

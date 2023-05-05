@@ -43,9 +43,14 @@ export default function BeforeAfterSlider() {
                         </p>
                         <button
                             type="button"
-                            className="sm:self-center text-center w-fit font-extrabold text-gray-800 bg-sy-500 px-4 py-2 my-2 rounded-sm text-sm sm:text-md lg:text-lg border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                            className="sm:self-center text-center w-fit my-2 font-extrabold text-gray-800 text-sm sm:text-md lg:text-lg "
                         >
-                            <Link href="/contact">Request Service </Link>
+                            <Link
+                                href="/contact"
+                                className="block px-4 py-2  bg-sy-500 rounded-sm border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                            >
+                                Request Service{" "}
+                            </Link>
                         </button>
                     </figcaption>
                 </div>
