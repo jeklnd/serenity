@@ -2,8 +2,7 @@ import React from "react";
 import NavBar from "@/components/NavBar/NavBar.jsx";
 import ServicesSection from "@/components/Services/ServicesSection.jsx";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
-import NavFooter from "@/components/Footers/NavFooter.jsx";
-import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
+import Footer from "@/components/Footers/Footer.jsx";
 
 export default function Services() {
     return (
@@ -18,10 +17,7 @@ export default function Services() {
                 <ServicesSection heading={""} />
                 <ContactSection />
             </main>
-            <footer>
-                <NavFooter />
-                <CopyrightFooter />
-            </footer>
+            <Footer />
         </>
     );
 }

@@ -3,8 +3,7 @@ import NavBar from "@/components/NavBar/NavBar.jsx";
 import AccentBorder from "@/components/Contact/AccentBorder";
 import Image from "next/image";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
-import NavFooter from "@/components/Footers/NavFooter.jsx";
-import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
+import Footer from "@/components/Footers/Footer.jsx";
 import aboutUsImage from "public/assets/about-us.jpg";
 import styles from "@/components/Services/ServiceBullets.module.css";
 
@@ -73,10 +72,7 @@ export default function About() {
                     <ContactSection />
                 </div>
             </main>
-            <footer>
-                <NavFooter />
-                <CopyrightFooter />
-            </footer>
+            <Footer />
         </>
     );
 }

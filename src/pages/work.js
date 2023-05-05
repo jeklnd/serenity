@@ -3,9 +3,7 @@ import NavBar from "@/components/NavBar/NavBar.jsx";
 import AccentBorder from "@/components/Contact/AccentBorder.jsx";
 import BeforeAndAfters from "@/components/BeforeAfterSlider/BeforeAndAfters.jsx";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
-import ImageGallery from "@/components/ImageGallery/ImageGallery.jsx";
-import NavFooter from "@/components/Footers/NavFooter.jsx";
-import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
+import Footer from "@/components/Footers/Footer.jsx";
 
 export default function Work() {
     return (
@@ -22,17 +20,12 @@ export default function Work() {
                     <p className="text-xl lg:text-2xl text-gray-600 text-center">
                         Your home before serenity and after.
                     </p>
-                    <AccentBorder classes="my-8 w-24"/>
+                    <AccentBorder classes="my-8 w-24" />
                     <BeforeAndAfters />
                 </div>
-
-                {/* <ImageGallery /> */}
                 <ContactSection />
             </main>
-            <footer>
-                <NavFooter />
-                <CopyrightFooter />
-            </footer>
+            <Footer />
         </>
     );
 }

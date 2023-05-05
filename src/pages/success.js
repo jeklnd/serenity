@@ -5,9 +5,7 @@ import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider.
 import ServicesSection from "@/components/Services/ServicesSection.jsx";
 import ProudlyServing from "@/components/Map/ProudlyServing.jsx";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
-import NavFooter from "@/components/Footers/NavFooter.jsx";
-import CopyrightFooter from "@/components/Footers/CopyrightFooter.jsx";
-
+import Footer from "@/components/Footers/Footer.jsx";
 
 export default function Success() {
     return (
@@ -19,14 +17,11 @@ export default function Success() {
             <main className="grow flex flex-col justify-around">
                 <HeroSection />
                 <TestimonialSlider />
-                <ServicesSection heading="How we help"/>
+                <ServicesSection heading="How we help" />
                 <ProudlyServing />
                 <ContactSection />
             </main>
-            <footer>
-                <NavFooter />
-                <CopyrightFooter />
-            </footer>
+            <Footer />
         </>
     );
 }
