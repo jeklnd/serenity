@@ -4,7 +4,7 @@ import Link from "next/link";
 import logo from "public/assets/logo.svg";
 import { useRouter } from "next/router";
 
-export default function NavFooter() {
+export default function NavigationFooter() {
     // const [isActiveIndex, setIsActiveIndex] = useState()
     const router = useRouter();
     const path = router.pathname;
@@ -28,7 +28,7 @@ export default function NavFooter() {
         );
     });
     return (
-        <section className="bg-slate-800 py-12 px-4">
+        <section id="navigation-footer" className="bg-slate-800 py-12 px-4">
             <div className="container mx-auto flex justify-center gap-20">
                 <a className="relative h-36 w-36" href={"/"}>
                     <Image
