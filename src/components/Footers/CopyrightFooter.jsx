@@ -5,7 +5,7 @@ export default function CopyrightFooter() {
     const date = new Date();
     const year = date.getFullYear();
     return (
-        <div className="bg-slate-900 py-12">
+        <section id="copyright-footer" className="bg-slate-900 py-12">
             <div className="container mx-auto text-center text-[#54575a] text-sm font-normal tracking-wide flex flex-col justify-center">
                 <p>© {year} Serenity Home Repair. All rights reserved.</p>
                 <br />
@@ -43,9 +43,7 @@ export default function CopyrightFooter() {
                         </Link>
                     </p>
                 </div>
-                {/* <br /> */}
-                {/* <p>Design and development by Jesse Krensel</p> */}
             </div>
-        </div>
+        </section>
     );
 }
