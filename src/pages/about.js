@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "@/components/NavBar/NavBar.jsx";
+import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import AccentBorder from "@/components/Contact/AccentBorder";
 import Image from "next/image";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
@@ -11,7 +11,7 @@ export default function About() {
     return (
         <>
             <header className="sticky top-0 z-40">
-                <NavBar />
+                <NavigationBar />
             </header>
             <main className="grow bg-slate-400">
                 <div className="container flex flex-col mx-auto relative xl:flex-row xl:py-12 ">

@@ -1,9 +1,9 @@
-import NavBar from "@/components/NavBar/NavBar.jsx";
+import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import SuccessMessage from "@/components/RequestForm/SuccessMessage.jsx";
 import HeroSection from "@/components/HeroSection/HeroSection.jsx";
-import TestimonialSlider from "@/components/TestimonialSlider/TestimonialSlider.jsx";
+import TestimonialSection from "@/components/Testimonials/TestimonialSection.jsx";
 import ServicesSection from "@/components/Services/ServicesSection.jsx";
-import ProudlyServing from "@/components/Map/ProudlyServing.jsx";
+import MapSection from "@/components/MapSection/MapSection.jsx";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
 import Footer from "@/components/Footers/Footer.jsx";
 
@@ -11,14 +11,14 @@ export default function Success() {
     return (
         <>
             <header className="sticky top-0 z-40">
-                <NavBar />
+                <NavigationBar />
                 <SuccessMessage />
             </header>
             <main className="grow flex flex-col justify-around">
                 <HeroSection />
-                <TestimonialSlider />
+                <TestimonialSection />
                 <ServicesSection heading="How we help" />
-                <ProudlyServing />
+                <MapSection />
                 <ContactSection />
             </main>
             <Footer />

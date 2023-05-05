@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "@/components/NavBar/NavBar.jsx";
+import NavigationBar from "@/components/Navigation/NavigationBar.jsx";
 import AccentBorder from "@/components/Contact/AccentBorder.jsx";
 import BeforeAndAfters from "@/components/BeforeAfterSlider/BeforeAndAfters.jsx";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
@@ -9,7 +9,7 @@ export default function Work() {
     return (
         <>
             <header className="sticky top-0 z-40">
-                <NavBar />
+                <NavigationBar />
             </header>
             <main className="grow">
                 <div className="bg-slate-400 flex flex-col items-center">
