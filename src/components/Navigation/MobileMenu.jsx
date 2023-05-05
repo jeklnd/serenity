@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import styles from "./navbar.module.css";
 
-export default function NavSidebar({ isOpen, onToggleMenu }) {
+export default function MobileMenu({ isOpen, onToggleMenu }) {
     const router = useRouter();
     const [isActiveRoute, setIsActiveRoute] = useState(router.pathname);
     const [xPosition, setXPosition] = useState(null);
@@ -20,20 +19,8 @@ export default function NavSidebar({ isOpen, onToggleMenu }) {
                 }}
                 onTouchEnd={handleSwipe}
             >
-                {/* decorative lines*/}
-                {/* <div className="fixed bottom-0 w-screen border-[1px] border-sy-500/50"></div> */}
+                {/* Decorative Line*/}
                 <div className="fixed top-0 w-screen border-2 border-sy-500"></div>
-                {/* <div className="fixed left-0 h-screen border-[1px] border-sy-500/50"></div> */}
-                {/* <div className="fixed right-0 h-screen border-[1px] border-sy-500/50 z-10"></div> */}
-                {/* <div
-                    className={`fixed right-0 top-0 h-96 w-[35rem] rotate-[20deg] translate-x-60 -translate-y-[18rem] ${styles.wiggle}`}
-                ></div> */}
-                {/* <div
-                    className={`fixed bottom-0 h-2 w-full ${styles.wiggle}`}
-                ></div> */}
-                {/* <div
-                    className={`fixed top-0 h-2 w-full ${styles.wiggle}`}
-                ></div> */}
 
                 <div
                     data-isopen={isOpen}
