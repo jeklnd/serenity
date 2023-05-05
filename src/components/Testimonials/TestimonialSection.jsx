@@ -6,7 +6,7 @@ import CarouselDots from "./CarouselDots.jsx";
 import QuotationMark from "./QuotationMark.jsx";
 import styles from "./TestimonialSlider.module.css";
 
-export default function TestimonialSlider() {
+export default function TestimonialSection() {
     const [isVisibleIndex, setIsVisibleIndex] = useState(0);
 
     const increment = useCallback(() => {
@@ -88,7 +88,7 @@ export default function TestimonialSlider() {
                                 </li>
                             );
                         })}
-                        <QuotationMark moreClasses="self-end pb-24" />
+                        <QuotationMark className="self-end pb-24" />
                     </ul>
                     <RightArrow increment={increment} />
                 </div>
