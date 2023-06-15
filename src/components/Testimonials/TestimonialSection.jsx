@@ -8,6 +8,7 @@ import styles from "./TestimonialSlider.module.css";
 
 export default function TestimonialSection() {
     const [isVisibleIndex, setIsVisibleIndex] = useState(0);
+    const [xPosition, setXPosition] = useState(null);
 
     const increment = useCallback(() => {
         isVisibleIndex < testimonials.length - 1
@@ -20,8 +21,6 @@ export default function TestimonialSection() {
             ? setIsVisibleIndex(isVisibleIndex - 1)
             : setIsVisibleIndex(testimonials.length - 1);
     }, [isVisibleIndex]);
-
-    const [xPosition, setXPosition] = useState(null);
 
     useEffect(() => {
         const interval = setInterval(increment, 12000);
