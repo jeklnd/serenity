@@ -6,15 +6,15 @@ export default function ContactInformation({ classesFromParent }) {
     const divStyles = "flex flex-col gap-2 items-center";
     const iconStyles = "h-8 w-8 text-sy-500";
     const pStyles = "text-xl font-medium";
-    const weekdays = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-    ];
+    // const weekdays = [
+    //     "Monday",
+    //     "Tuesday",
+    //     "Wednesday",
+    //     "Thursday",
+    //     "Friday",
+    //     "Saturday",
+    //     "Sunday",
+    // ];
 
     return (
         <div
@@ -39,7 +39,7 @@ export default function ContactInformation({ classesFromParent }) {
                 </div>
 
                 {/* Hours of Operation Div*/}
-                <div className={`${divStyles}`}>
+                {/* <div className={`${divStyles}`}>
                     <ClockIcon className={iconStyles} />
                     <ul>
                         {weekdays.map((day, index) => {
@@ -56,7 +56,7 @@ export default function ContactInformation({ classesFromParent }) {
                             );
                         })}
                     </ul>
-                </div>
+                </div> */}
             </div>
         </div>
     );
