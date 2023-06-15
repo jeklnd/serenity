@@ -34,7 +34,7 @@ export default function ContactInformation({ classesFromParent }) {
                 <div className={divStyles}>
                     <EnvelopeIcon className={iconStyles} />
                     <p className={"text-lg font-medium"}>
-                        RKrensel@SerenityHomeRepair.com
+                        Robert@SerenityHomeRepair.com
                     </p>
                 </div>
 
