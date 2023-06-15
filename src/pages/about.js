@@ -61,14 +61,14 @@ export default function About() {
                             is your go-to local handyman for all your home
                             repair and maintenance needs. With a wide range of
                             services, including carpentry, plumbing, electrical,
-                            and exterior home repair, our team of experts is
-                            equipped to handle any project you have in mind.
+                            and exterior home repair, we are
+                            equipped to handle most every project on your &quot;to do&quot; list.
                             <AccentBorder classes="w-24 my-8 self-center text-center relative left-1/2 -translate-x-1/2 border-sy-500 " />
                             We take pride in providing exceptional customer
                             service and delivering high-quality workmanship that
                             exceeds your expectations. Contact Serenity Home
                             Repair today to schedule a consultation and let us
-                            take care of all your home repair needs.
+                            take care of all your home repair needs, especially the ones you&apos;ve been putting off for years!
                         </div>
                     </div>
                 </div>
