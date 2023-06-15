@@ -36,7 +36,7 @@ export const couples = [
         before: sillBefore,
         after: sillAfter,
         description:
-            "The window sill had been neglected for years, causing it to rot and lose its paint. But with the arrival of Serenity Home Repair, the damaged area was soon patched up and given a fresh coat of paint. Now the window sill looked as good as new, adding to the beauty of the home.",
+            "The window sill had been neglected for years, causing it to rot and lose its paint. But with the arrival of Serenity Home Repair, the damaged area was soon patched up and given a fresh coat of paint. Now the window sill looks as good as new, adding to the beauty of the home.",
     },
     {
         before: doorBefore,
