@@ -6,17 +6,15 @@ export default async function handler(req, res) {
     const date = new Date();
     const today = date.toLocaleDateString("en-US");
     const message = {
-        to: "serenityhomerepair2534@gmail.com",
-        from: "serenityhomerepair2534@gmail.com",
+        to: "robert@serenityhomerepair.com",
+        from: "robert@serenityhomerepair.com",
         subject: `New Lead: ${body.first} ${body.last} – ${today}`,
         html: `<h2>New Lead: ${body.first} ${body.last} – ${today}</h2>
         <p>A lead submitted the following information:<br/><br/>
         First: <strong>${body.first}</strong> <br/>
         Last: <strong>${body.last}</strong><br/>
         Email: <strong>${body.email}</strong><br/>
-        Message: <strong>${body.message}</strong><br/><br/>
-        Your truly,<br/>
-        SerenityHomeRepair.com</p>`,
+        Message: <strong>${body.message}</strong><br/><br/>`,
     };
     await sg
         .send(message)
