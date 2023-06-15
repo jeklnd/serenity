@@ -15,7 +15,7 @@ export const rooms = [
     {
         room: "Bedroom",
         image: "https://picsum.photos/200",
-        text: "Bring serenity to the most peaceful room of the home with our full range of bedroom services.",
+        text: "Bring serenity to the most peaceful room of the home with our full range of bedroom services including flooring, closet door repair/replacement, install ceiling fans, plus more.",
         image: bedroom,
         icon: <MdBed />,
     },
@@ -29,17 +29,17 @@ export const rooms = [
     {
         room: "Kitchen",
         image: "https://picsum.photos/200",
-        text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind.",
+        text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind. Serenity can help with faucet replacement, dishwasher and microwave installation, plus more.",
         image: kitchen,
         icon: <MdKitchen />,
     },
-    {
-        room: "Basement",
-        image: "https://picsum.photos/200",
-        text: "Bring tranquility to your home from the bottom up. Serenity Home Repair's basement services cover it all.",
-        image: basement,
-        icon: <MdStairs />,
-    },
+    // {
+    //     room: "Basement",
+    //     image: "https://picsum.photos/200",
+    //     text: "Bring tranquility to your home from the bottom up. Serenity Home Repair's basement services cover it all.",
+    //     image: basement,
+    //     icon: <MdStairs />,
+    // },
 ];
 
 export const services = [
