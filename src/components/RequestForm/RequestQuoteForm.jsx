@@ -100,7 +100,7 @@ export default function RequestQuoteForm({
         <div className="flex flex-col content-center flex-wrap w-fit mx-auto ">
             <div className="max-w-md text-center">
                 <FormSubHeading heading={heading} />
-                <form id={`form-${id}`} action="" method="POST">
+                <form id={`form-${id}`} action="/api/send-email" method="POST">
                     <div className="flex flex-col p-2 gap-2 min-[370px]:flex-row ">
                         <div className="flex flex-col w-full sm:min-w-1/2">
                             <input
