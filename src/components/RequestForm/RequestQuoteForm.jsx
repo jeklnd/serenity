@@ -37,9 +37,12 @@ export default function RequestQuoteForm({
     };
 
     const validateForm = () => {
-        const form = document.getElementById(`form-${id}`);
-        const inputElements = Array.from(form.querySelectorAll("input, textarea"));
-        return inputElements.every((el) => el.validity.valid);
+        if (typeof window !== 'undefined') {
+            const form = document.getElementById(`form-${id}`);
+            const inputElements = Array.from(form.querySelectorAll("input, textarea"));
+            return inputElements.every((el) => el.validity.valid);
+        }
+        return false; // Return false if code is running on the server
     };
 
     const handleFormSubmit = async (e) => {
