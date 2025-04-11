@@ -41,6 +41,7 @@ export default function RequestQuoteForm({
         const inputElements = Array.from(form.querySelectorAll("input, textarea"));
         return inputElements.every((el) => el.validity.valid);
     };
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();  // Prevent page reload
     
@@ -199,6 +200,20 @@ export default function RequestQuoteForm({
                         </p>
                     </div>
                 </form>
+
+                {/* Success Message */}
+                {successfulSubmission === true && (
+                    <div className="mt-4 text-green-600 text-sm">
+                        Thank you for your submission! We will get back to you soon.
+                    </div>
+                )}
+
+                {/* Failure Message */}
+                {successfulSubmission === false && (
+                    <div className="mt-4 text-red-600 text-sm">
+                        Something went wrong. Please try again later.
+                    </div>
+                )}
             </div>
         </div>
     );
