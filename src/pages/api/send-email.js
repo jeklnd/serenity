@@ -1,63 +1,66 @@
 import sg from "@sendgrid/mail";
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 
 export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        const { recaptcha_token, first, last, email, phone, message } = req.body;
+  if (req.method === "POST") {
+    const { recaptcha_token, first, last, email, phone, message } = req.body;
 
-        // Step 1: Validate the reCAPTCHA token with Google
-        const recaptchaUrl = `https://www.google.com/recaptcha/api/siteverify`;
-        const recaptchaParams = new URLSearchParams({
-            secret: RECAPTCHA_SECRET_KEY,
-            response: recaptcha_token,
-        });
+    // Step 1: Validate the reCAPTCHA token with Google
+    const recaptchaUrl = "https://www.google.com/recaptcha/api/siteverify";
+    const recaptchaParams = new URLSearchParams({
+      secret: RECAPTCHA_SECRET_KEY,
+      response: recaptcha_token,
+    });
 
-        try {
-            console.log("Starting reCAPTCHA validation...");
-            const recaptchaResponse = await fetch(recaptchaUrl, {
-                method: "POST",
-                body: recaptchaParams,
-            });
+    try {
+      console.log("Starting reCAPTCHA validation...");
+      const recaptchaResponse = await fetch(recaptchaUrl, {
+        method: "POST",
+        body: recaptchaParams,
+      });
 
-            const recaptchaData = await recaptchaResponse.json();
-            console.log("reCAPTCHA response:", recaptchaData);
+      const recaptchaData = await recaptchaResponse.json();
+      console.log("reCAPTCHA response:", recaptchaData);
 
-            if (!recaptchaData.success) {
-                console.log("reCAPTCHA validation failed");
-                return res.status(400).json({ message: "reCAPTCHA validation failed." });
-            }
+      if (!recaptchaData.success) {
+        console.log("reCAPTCHA validation failed");
+        return res.status(400).json({ message: "reCAPTCHA validation failed." });
+      }
 
-            // Step 2: Proceed with SendGrid email if reCAPTCHA is valid
-            console.log("Proceeding to send email...");
-            sg.setApiKey(process.env.SENDGRID_API_KEY);
-            const date = new Date();
-            const today = date.toLocaleDateString("en-US");
-            const emailMessage = {
-                to: "robert@serenityhomerepair.com", // Your email address
-                from: "robert@serenityhomerepair.com", // Your email address
-                subject: `New Lead: ${first} ${last} – ${today}`,
-                html: `
-                    <h2>New Lead: ${first} ${last} – ${today}</h2>
-                    <p>A lead submitted the following information:<br/><br/>
-                    First: <strong>${first}</strong><br/>
-                    Last: <strong>${last}</strong><br/>
-                    Email: <strong>${email}</strong><br/>
-                    Phone: <strong>${phone}</strong><br/>
-                    Message: <strong>${message}</strong><br/><br/>`,
-            };
+      // Step 2: Proceed with SendGrid email if reCAPTCHA is valid
+      console.log("Proceeding to send email...");
+      sg.setApiKey(SENDGRID_API_KEY);
 
-            await sg.send(emailMessage);
-            console.log("Sent message");
+      const date = new Date();
+      const today = date.toLocaleDateString("en-US");
 
-            // Step 3: Respond with success after email is sent
-            res.status(200).json({ message: "Form submitted successfully!" });
-        } catch (error) {
-            console.error("Error:", error);
-            res.status(500).json({ message: "Internal Server Error" });
-        }
-    } else {
-        res.status(405).json({ message: "Method Not Allowed" });
+      const emailMessage = {
+        to: "robert@serenityhomerepair.com", // Your email address
+        from: "robert@serenityhomerepair.com", // Your email address
+        subject: `New Lead: ${first} ${last} – ${today}`,
+        html: `
+          <h2>New Lead: ${first} ${last} – ${today}</h2>
+          <p>A lead submitted the following information:<br/><br/>
+          First: <strong>${first}</strong><br/>
+          Last: <strong>${last}</strong><br/>
+          Email: <strong>${email}</strong><br/>
+          Phone: <strong>${phone}</strong><br/>
+          Message: <strong>${message}</strong><br/><br/>`,
+      };
+
+      await sg.send(emailMessage);
+      console.log("Sent message");
+
+      // Step 3: Respond with success after email is sent
+      res.status(200).json({ message: "Form submitted successfully!" });
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).json({ message: "Internal Server Error" });
     }
+  } else {
+    res.status(405).json({ message: "Method Not Allowed" });
+  }
 }

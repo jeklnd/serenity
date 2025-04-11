@@ -10,7 +10,7 @@ export default function RequestQuoteForm({
     id,
     heading,
 }) {
-    const [successfulSubmission, setSuccessfulSubmission] = useState(null);
+    const [successfulSubmission, setSuccessfulSubmission] = useState(null);  // Initially null for better control
     const [values, updateValue] = useImmer({
         first: "",
         last: "",
@@ -44,26 +44,37 @@ export default function RequestQuoteForm({
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();  // Prevent page reload
-    
+
+        // Reset success/failure message before starting submission
+        setSuccessfulSubmission(null);
+
+        if (!validateForm()) {
+            console.warn("Form inputs are invalid.");
+            setSuccessfulSubmission(false);  // Show failure if form is invalid
+            return;
+        }
+
         if (!isRecaptchaReady) {
             console.warn("reCAPTCHA not yet available");
+            setSuccessfulSubmission(false);  // Show failure if reCAPTCHA isn't ready
             return;
         }
-    
+
         // Get the reCAPTCHA token
         const token = await executeRecaptcha("request_quote");
-    
+
         if (!token) {
             console.error("Failed to retrieve reCAPTCHA token");
+            setSuccessfulSubmission(false);  // Show failure if reCAPTCHA token isn't available
             return;
         }
-    
+
         // Create the form data object
         const formData = {
             ...values,
             recaptcha_token: token, // Add the reCAPTCHA token to the data
         };
-    
+
         try {
             const response = await fetch("/api/send-email", {
                 method: "POST",
@@ -72,7 +83,7 @@ export default function RequestQuoteForm({
                 },
                 body: JSON.stringify(formData),  // Send form data as JSON
             });
-    
+
             if (response.ok) {
                 setSuccessfulSubmission(true);  // Show success message
                 // Optionally, reset the form values
@@ -83,11 +94,11 @@ export default function RequestQuoteForm({
                 });
             } else {
                 console.error("Failed to submit the form.");
-                setSuccessfulSubmission(false);
+                setSuccessfulSubmission(false);  // Show failure if the response is not OK
             }
         } catch (error) {
             console.error("Error submitting form:", error);
-            setSuccessfulSubmission(false);
+            setSuccessfulSubmission(false);  // Show failure if there is an error
         }
     };
 
