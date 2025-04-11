@@ -107,6 +107,9 @@ export default function RequestQuoteForm({
     const error_styles =
         "hidden data-[success=false]:peer-invalid:block text-xs text-left pl-1 text-red-700";
 
+    // Disable submit if form is invalid or empty
+    const isSubmitDisabled = !validateForm();
+
     return (
         <div className="flex flex-col content-center flex-wrap w-fit mx-auto ">
             <div className="max-w-md text-center">
@@ -200,6 +203,7 @@ export default function RequestQuoteForm({
                         buttonText="Submit Request"
                         className=""
                         onClick={handleFormSubmit}
+                        disabled={isSubmitDisabled}  // Disable submit if form is invalid
                     />
 
                     <div className="flex flex-row justify-center gap-2 items-center px-2">
