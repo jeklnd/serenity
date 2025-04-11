@@ -41,53 +41,52 @@ export default function RequestQuoteForm({
         const inputElements = Array.from(form.querySelectorAll("input, textarea"));
         return inputElements.every((el) => el.validity.valid);
     };
-
     const handleFormSubmit = async (e) => {
         e.preventDefault();  // Prevent page reload
-
+    
         if (!isRecaptchaReady) {
             console.warn("reCAPTCHA not yet available");
             return;
         }
-
+    
         // Get the reCAPTCHA token
         const token = await executeRecaptcha("request_quote");
-        console.log("reCAPTCHA token:", token); // Log the token to the console for debugging
-
+    
         if (!token) {
             console.error("Failed to retrieve reCAPTCHA token");
             return;
         }
-
-        // Create hidden input for reCAPTCHA response and append it to the form
-        const tokenInput = document.createElement("input");
-        tokenInput.type = "hidden";
-        tokenInput.name = "g-recaptcha-response";
-        tokenInput.value = token;
-        e.target.appendChild(tokenInput);
-
-        // Check if all form fields are valid
-        const form = document.getElementById(`form-${id}`);
-        const inputElements = Array.from(form.querySelectorAll("input, textarea"));
-        const allNodesAreValid = inputElements.every((el) => el.validity.valid);
-
-        if (allNodesAreValid) {
-            // Form is valid, submit it
-            form.submit();
-
-            // Set successful submission state
-            setSuccessfulSubmission(true);
-
-            // Clear form values
-            updateValue((draft) => {
-                for (let item in draft) {
-                    draft[item] = "";
-                }
+    
+        // Create the form data object
+        const formData = {
+            ...values,
+            recaptcha_token: token, // Add the reCAPTCHA token to the data
+        };
+    
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",  // Ensure content type is JSON
+                },
+                body: JSON.stringify(formData),  // Send form data as JSON
             });
-        } else {
-            // Form is invalid, show failure state
+    
+            if (response.ok) {
+                setSuccessfulSubmission(true);  // Show success message
+                // Optionally, reset the form values
+                updateValue((draft) => {
+                    for (let item in draft) {
+                        draft[item] = "";
+                    }
+                });
+            } else {
+                console.error("Failed to submit the form.");
+                setSuccessfulSubmission(false);
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
             setSuccessfulSubmission(false);
-            console.warn("Form validation failed. Please check all fields.");
         }
     };
 
