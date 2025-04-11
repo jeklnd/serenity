@@ -1,5 +1,5 @@
 import sg from "@sendgrid/mail";
-const fetch = require("node-fetch");
+import fetch from 'node-fetch'; // Changed to import
 
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
             sg.setApiKey(process.env.SENDGRID_API_KEY);
             const date = new Date();
             const today = date.toLocaleDateString("en-US");
-            const message = {
+            const emailMessage = {
                 to: "robert@serenityhomerepair.com", // Your email address
                 from: "robert@serenityhomerepair.com", // Your email address
                 subject: `New Lead: ${first} ${last} – ${today}`,
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
                     Message: <strong>${message}</strong><br/><br/>`,
             };
 
-            await sg.send(message);
+            await sg.send(emailMessage);
             console.log("Sent message");
 
             // Step 3: Respond with success after email is sent
