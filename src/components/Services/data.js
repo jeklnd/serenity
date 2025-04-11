@@ -1,7 +1,3 @@
-import bedroom from "public/assets/services/bedroom.jpeg";
-import bathroom from "public/assets/services/bathroom.jpeg";
-import kitchen from "public/assets/services/kitchen.webp";
-import basement from "public/assets/services/basement.jpeg";
 import { MdPlumbing } from "react-icons/md";
 import { MdElectricalServices } from "react-icons/md";
 import { MdKitchen } from "react-icons/md";
@@ -16,21 +12,21 @@ export const rooms = [
         room: "Bedroom",
         image: "https://picsum.photos/200",
         text: "Bring serenity to the most peaceful room of the home with our full range of bedroom services including flooring, closet door repair/replacement, install ceiling fans, plus more.",
-        image: bedroom,
+        image: "/assets/services/bedroom.jpeg",
         icon: <MdBed />,
     },
     {
         room: "Bathroom",
         image: "https://picsum.photos/200",
         text: "Ready to replace the vanity? Retile the floor? Install a new toilet? Serenity Home Repair has you covered.",
-        image: bathroom,
+        image: "/assets/services/bathroom.jpeg",
         icon: <MdBathroom />,
     },
     {
         room: "Kitchen",
         image: "https://picsum.photos/200",
         text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind. Serenity can help with faucet replacement, dishwasher and microwave installation, plus more.",
-        image: kitchen,
+        image: "/assets/services/kitchen.webp",
         icon: <MdKitchen />,
     },
     // {

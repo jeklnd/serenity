@@ -1,5 +1,4 @@
 import React from "react";
-import hero from "/public/assets/hero.jpg";
 import Image from "next/image";
 import SolidYellowButton from "@/components/Buttons/SolidYellowButton.jsx";
 import { useRouter } from "next/router";
@@ -10,7 +9,7 @@ export default function HeroSection() {
         <section id="heroSection" className="relative">
             {/* Background Image */}
             <Image
-                src={hero}
+                src="/assets/hero.jpg"
                 alt="Handyman image"
                 className="object-cover brightness-150 opacity-25"
                 fill

@@ -5,7 +5,6 @@ import AccentBorder from "@/components/Contact/AccentBorder";
 import Image from "next/image";
 import ContactSection from "@/components/Contact/ContactSection.jsx";
 import Footer from "@/components/Footers/Footer.jsx";
-import aboutUsImage from "public/assets/about-us.jpg";
 import styles from "@/components/Services/ServiceBullets.module.css";
 
 export default function About() {
@@ -34,12 +33,14 @@ export default function About() {
                     {/* Image */}
                     <div className="relative z-10 max-w-3xl self-center">
                         <Image
-                            src={aboutUsImage}
+                            src="/assets/about-us.jpg"
                             alt="image of Robert"
                             className="rounded-md object-contain order-t-2 border-gray-300/50 shadow-lg"
                             priority
+                            width={600}  // Set the width you want (in pixels)
+                            height={400} // Set the height you want (in pixels)
                             sizes="100vw"
-                        ></Image>
+                        />
                     </div>
 
                     {/* Description Heading and Body Text */}
