@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useImmer } from "use-immer";
 import FormSubHeading from "./FormSubHeading.jsx";
 import SolidYellowButton from "@/components/Buttons/SolidYellowButton.jsx";
@@ -18,7 +18,16 @@ export default function RequestQuoteForm({
         email: "",
         message: "",
     });
+
     const { executeRecaptcha } = useGoogleReCaptcha();
+    const [isRecaptchaReady, setRecaptchaReady] = useState(false);
+
+    // Track reCAPTCHA load state
+    useEffect(() => {
+        if (executeRecaptcha) {
+            setRecaptchaReady(true);
+        }
+    }, [executeRecaptcha]);
 
     const handleFormInputChange = (e) => {
         const { name, value } = e.target;
@@ -35,42 +44,40 @@ export default function RequestQuoteForm({
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();  // Prevent page reload
-    
-        // Check if reCAPTCHA is available
-        if (!executeRecaptcha) {
+
+        if (!isRecaptchaReady) {
             console.warn("reCAPTCHA not yet available");
             return;
         }
-    
+
         // Get the reCAPTCHA token
         const token = await executeRecaptcha("request_quote");
         console.log("reCAPTCHA token:", token); // Log the token to the console for debugging
-    
-        // If the token is missing or invalid, warn the user
+
         if (!token) {
             console.error("Failed to retrieve reCAPTCHA token");
             return;
         }
-    
+
         // Create hidden input for reCAPTCHA response and append it to the form
         const tokenInput = document.createElement("input");
         tokenInput.type = "hidden";
         tokenInput.name = "g-recaptcha-response";
         tokenInput.value = token;
         e.target.appendChild(tokenInput);
-    
+
         // Check if all form fields are valid
         const form = document.getElementById(`form-${id}`);
         const inputElements = Array.from(form.querySelectorAll("input, textarea"));
         const allNodesAreValid = inputElements.every((el) => el.validity.valid);
-    
+
         if (allNodesAreValid) {
             // Form is valid, submit it
             form.submit();
-    
+
             // Set successful submission state
             setSuccessfulSubmission(true);
-    
+
             // Clear form values
             updateValue((draft) => {
                 for (let item in draft) {
