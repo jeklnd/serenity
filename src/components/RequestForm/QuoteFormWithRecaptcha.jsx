@@ -5,7 +5,7 @@ import RequestQuoteForm from './RequestQuoteForm';
 export default function QuoteFormWithRecaptcha(props) {
   return (
     <GoogleReCaptchaProvider
-      reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       scriptProps={{
         async: true, // optional
         defer: true, // optional
