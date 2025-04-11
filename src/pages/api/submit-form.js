@@ -1,5 +1,5 @@
 import sg from "@sendgrid/mail";
-import fetch from 'node-fetch'; // Changed to import
+import fetch from 'node-fetch';
 
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
