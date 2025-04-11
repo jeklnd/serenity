@@ -11,28 +11,9 @@ const nextConfig = {
             },
         ],
     },
-    // async headers() {
-    //     return [
-    //         {
-    //             source: "/api/send-email",
-    //             headers: [
-    //                 {
-    //                     key: "Allow",
-    //                     value: "POST",
-    //                 },
-    //             ],
-    //         },
-    //     ];
-    // },
-    // async redirects() {
-    //     return [
-    //         {
-    //             source: "/api/send-email",
-    //             destination: "/",
-    //             permanent: true,
-    //         },
-    //     ];
-    // },
+    env: {
+        NEXT_PUBLIC_RECAPTCHA_SITE_KEY: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+    },
 };
 
 module.exports = nextConfig;
