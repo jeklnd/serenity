@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import RequestQuoteForm from "@/components/RequestForm/RequestQuoteForm.jsx";
+import QuoteFormWithRecaptcha from "@/components/RequestForm/QuoteFormWithRecaptcha.jsx";
 
 export default function DropdownForm({ isDropped, onClick }) {
     const id = useId();
@@ -11,7 +11,7 @@ export default function DropdownForm({ isDropped, onClick }) {
                 className=" sm:px-4 -translate-y-full data-[dropped=true]:translate-y-0 transition flex justify-center items-start bg-transparent h-fit w-screen absolute z-0 sm:bg-transparent"
             >
                 <div className="py-6 sm:py-10 px-2 relative bg-gray-300 sm:my-6 sm:m-4 rounded-b-md sm:rounded-md">
-                    <RequestQuoteForm
+                    <QuoteFormWithRecaptcha
                         isInDropdown={true}
                         id={id}
                         heading="Request Quote"
