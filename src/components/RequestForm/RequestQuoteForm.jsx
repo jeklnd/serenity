@@ -3,6 +3,7 @@ import { useImmer } from "use-immer";
 import FormSubHeading from "./FormSubHeading.jsx";
 import SolidYellowButton from "@/components/Buttons/SolidYellowButton.jsx";
 import { LockClosedIcon } from "@heroicons/react/24/solid";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function RequestQuoteForm({
     isInDropdown = false,
@@ -17,7 +18,7 @@ export default function RequestQuoteForm({
         email: "",
         message: "",
     });
-    const [isVisible, setIsVisible] = useState(false);
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
     const handleFormInputChange = (e) => {
         const { name, value } = e.target;
@@ -26,24 +27,60 @@ export default function RequestQuoteForm({
         });
     };
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
+    const validateForm = () => {
         const form = document.getElementById(`form-${id}`);
-        const inputElements = Array.from(form.children).flatMap((child) =>
-            Array.from(child.querySelectorAll("input, textarea"))
-        );
-        const allNodesAreValid = inputElements.every((el) => el.validity.valid);
+        const inputElements = Array.from(form.querySelectorAll("input, textarea"));
+        return inputElements.every((el) => el.validity.valid);
+    };
 
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();  // Prevent page reload
+    
+        // Check if reCAPTCHA is available
+        if (!executeRecaptcha) {
+            console.warn("reCAPTCHA not yet available");
+            return;
+        }
+    
+        // Get the reCAPTCHA token
+        const token = await executeRecaptcha("request_quote");
+        console.log("reCAPTCHA token:", token); // Log the token to the console for debugging
+    
+        // If the token is missing or invalid, warn the user
+        if (!token) {
+            console.error("Failed to retrieve reCAPTCHA token");
+            return;
+        }
+    
+        // Create hidden input for reCAPTCHA response and append it to the form
+        const tokenInput = document.createElement("input");
+        tokenInput.type = "hidden";
+        tokenInput.name = "g-recaptcha-response";
+        tokenInput.value = token;
+        e.target.appendChild(tokenInput);
+    
+        // Check if all form fields are valid
+        const form = document.getElementById(`form-${id}`);
+        const inputElements = Array.from(form.querySelectorAll("input, textarea"));
+        const allNodesAreValid = inputElements.every((el) => el.validity.valid);
+    
         if (allNodesAreValid) {
+            // Form is valid, submit it
             form.submit();
+    
+            // Set successful submission state
             setSuccessfulSubmission(true);
+    
+            // Clear form values
             updateValue((draft) => {
                 for (let item in draft) {
                     draft[item] = "";
                 }
             });
         } else {
+            // Form is invalid, show failure state
             setSuccessfulSubmission(false);
+            console.warn("Form validation failed. Please check all fields.");
         }
     };
 
@@ -56,7 +93,7 @@ export default function RequestQuoteForm({
         <div className="flex flex-col content-center flex-wrap w-fit mx-auto ">
             <div className="max-w-md text-center">
                 <FormSubHeading heading={heading} />
-                <form id={`form-${id}`} action="/api/send-email" method="POST">
+                <form id={`form-${id}`} action="" method="POST">
                     <div className="flex flex-col p-2 gap-2 min-[370px]:flex-row ">
                         <div className="flex flex-col w-full sm:min-w-1/2">
                             <input
@@ -69,10 +106,7 @@ export default function RequestQuoteForm({
                                 required
                                 className={input_styles}
                             ></input>
-                            <p
-                                className={error_styles}
-                                data-success={successfulSubmission}
-                            >
+                            <p className={error_styles} data-success={successfulSubmission}>
                                 Please input first name.
                             </p>
                         </div>
@@ -85,13 +119,9 @@ export default function RequestQuoteForm({
                                 onChange={handleFormInputChange}
                                 data-success={successfulSubmission}
                                 required
-                                data-invalid={successfulSubmission}
                                 className={input_styles}
                             ></input>
-                            <p
-                                className={error_styles}
-                                data-success={successfulSubmission}
-                            >
+                            <p className={error_styles} data-success={successfulSubmission}>
                                 Please input last name.
                             </p>
                         </div>
@@ -110,10 +140,7 @@ export default function RequestQuoteForm({
                                 data-success={successfulSubmission}
                                 className={input_styles}
                             ></input>
-                            <p
-                                className={error_styles}
-                                data-success={successfulSubmission}
-                            >
+                            <p className={error_styles} data-success={successfulSubmission}>
                                 Please input valid phone number.
                             </p>
                         </div>
@@ -126,14 +153,10 @@ export default function RequestQuoteForm({
                                 value={values.email}
                                 onChange={handleFormInputChange}
                                 required
-                                pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
                                 data-success={successfulSubmission}
                                 className={input_styles}
                             ></input>
-                            <p
-                                className={error_styles}
-                                data-success={successfulSubmission}
-                            >
+                            <p className={error_styles} data-success={successfulSubmission}>
                                 Please input valid email address.
                             </p>
                         </div>
@@ -150,20 +173,11 @@ export default function RequestQuoteForm({
                                 rows={`${isInDropdown === true ? "4" : "8"}`}
                                 className={input_styles}
                             ></textarea>
-                            <p
-                                className={error_styles}
-                                data-success={successfulSubmission}
-                            >
+                            <p className={error_styles} data-success={successfulSubmission}>
                                 Please provide a message.
                             </p>
                         </div>
                     </div>
-                    {/* <div className="flex justify-center">
-                        <div
-                            className="g-recaptcha"
-                            data-sitekey={process.env.RECAPTCHA_SITE_KEY}
-                        ></div>
-                    </div> */}
                     <SolidYellowButton
                         buttonText="Submit Request"
                         className=""
