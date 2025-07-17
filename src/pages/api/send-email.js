@@ -16,22 +16,22 @@ export default async function handler(req, res) {
     });
 
     try {
-      console.log("Starting reCAPTCHA validation...");
+  
       const recaptchaResponse = await fetch(recaptchaUrl, {
         method: "POST",
         body: recaptchaParams,
       });
 
       const recaptchaData = await recaptchaResponse.json();
-      console.log("reCAPTCHA response:", recaptchaData);
+      
 
       if (!recaptchaData.success) {
-        console.log("reCAPTCHA validation failed");
+
         return res.status(400).json({ message: "reCAPTCHA validation failed." });
       }
 
       // Step 2: Proceed with SendGrid email if reCAPTCHA is valid
-      console.log("Proceeding to send email...");
+  
       sg.setApiKey(SENDGRID_API_KEY);
 
       const date = new Date();
@@ -52,7 +52,7 @@ export default async function handler(req, res) {
       };
 
       await sg.send(emailMessage);
-      console.log("Sent message");
+      
 
       // Step 3: Respond with success after email is sent
       res.status(200).json({ message: "Form submitted successfully!" });
