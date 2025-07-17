@@ -88,7 +88,7 @@ export default function RequestQuoteForm({
         "hidden data-[success=false]:peer-invalid:block text-xs text-left pl-1 text-red-700 mt-1";
 
     return (
-        <div className="flex flex-col content-center flex-wrap w-fit mx-auto p-4 bg-white rounded-lg">
+        <div className="flex flex-col content-center flex-wrap w-fit mx-auto p-4 rounded-lg">
             <div className="max-w-md text-center">
                 <FormSubHeading heading={heading} />
                 
