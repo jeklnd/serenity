@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Serenity Home Repair</title>
+                <title>The Island Handyman</title>
             </Head>
             <header className="sticky top-0 z-40">
                 <NavigationBar />

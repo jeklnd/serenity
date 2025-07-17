@@ -14,8 +14,8 @@ export default function Services() {
             <header className="sticky top-0 z-40">
                 <NavigationBar />
             </header>
-            <main className="grow flex flex-col bg-slate-400">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-700 text-center pt-14 -mb-12 z-10">
+            <main className="grow flex flex-col bg-gray-50">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playful text-gray-800 text-center pt-14 -mb-12 z-10">
                     Services
                 </h1>
                 <ServicesSection heading={""} />

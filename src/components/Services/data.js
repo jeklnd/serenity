@@ -18,14 +18,14 @@ export const rooms = [
     {
         room: "Bathroom",
         image: "https://picsum.photos/200",
-        text: "Ready to replace the vanity? Retile the floor? Install a new toilet? Serenity Home Repair has you covered.",
+        text: "Ready to replace the vanity? Retile the floor? Install a new toilet? The Island Handyman has you covered.",
         image: "/assets/services/bathroom.jpeg",
         icon: <MdBathroom />,
     },
     {
         room: "Kitchen",
         image: "https://picsum.photos/200",
-        text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind. Serenity can help with faucet replacement, dishwasher and microwave installation, plus more.",
+        text: "The kitchen is the heart of the home. Make sure yours brings you and your guests peace of mind. The Island Handyman can help with faucet replacement, dishwasher and microwave installation, plus more.",
         image: "/assets/services/kitchen.webp",
         icon: <MdKitchen />,
     },

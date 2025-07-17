@@ -45,9 +45,9 @@ export default function TestimonialSection() {
             className={`${styles.bg} flex flex-col justify-center`}
         >
             <h2
-                className={`mt-12 mb-8 text-center font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-700`}
+                className={`mt-12 mb-8 text-center font-playful text-3xl sm:text-4xl lg:text-5xl text-gray-700`}
             >
-                Our clients love us.
+                What Our Clients Say
             </h2>
             <div className={`pb-10 px-2  gap-4 flex flex-col justify-center`}>
                 <div className="container mx-auto flex justify-center items-stretch text-center max-w-xl">

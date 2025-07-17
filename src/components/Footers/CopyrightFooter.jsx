@@ -7,7 +7,7 @@ export default function CopyrightFooter() {
     return (
         <section id="copyright-footer" className="bg-slate-900 py-12">
             <div className="container mx-auto text-center text-[#54575a] text-sm font-normal tracking-wide flex flex-col justify-center">
-                <p>© {year} Serenity Home Repair. All rights reserved.</p>
+                <p>© {year} The Island Handyman. All rights reserved.</p>
                 <br />
                 <div>
                     <p>

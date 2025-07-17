@@ -16,12 +16,12 @@ export default function Work() {
                 <NavigationBar />
             </header>
             <main className="grow">
-                <div className="bg-slate-400 flex flex-col items-center">
+                <div className="bg-gray-50 flex flex-col items-center">
                     {" "}
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-700 mb-2 text-center pt-14">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playful text-gray-700 mb-2 text-center pt-14">
                         Work
                     </h1>
-                    <p className="text-xl lg:text-2xl text-gray-600 text-center">
+                    <p className="text-xl lg:text-2xl text-gray-600 text-center font-medium">
                         Your home before serenity and after.
                     </p>
                     <AccentBorder classes="my-8 w-24" />

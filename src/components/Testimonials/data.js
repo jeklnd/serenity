@@ -5,7 +5,7 @@ export const testimonials = [
         location: "Orefield, PA",
     },
     {
-        text: "Serenity Home Repair got the job done! Not only were they professional, always on-time, courteous and cleanly-conscience while in my home, they did exactly what they said they would do. The best part - no hidden fees. Robert was upfront with all fees and did not start anything until the price was approved. I had a list of items including installing a screen door, replacing door knobs, fixing broken light fixtures and rebuilding a very old attic exhaust fan. I will definitely be calling them again for any future needs.",
+        text: "The Island Handyman got the job done! Not only were they professional, always on-time, courteous and cleanly-conscience while in my home, they did exactly what they said they would do. The best part - no hidden fees. Robert was upfront with all fees and did not start anything until the price was approved. I had a list of items including installing a screen door, replacing door knobs, fixing broken light fixtures and rebuilding a very old attic exhaust fan. I will definitely be calling them again for any future needs.",
         name: "Julie S.",
         location: "Bala Cynwyd, PA",
     },
@@ -20,7 +20,7 @@ export const testimonials = [
         location: "Plymouth Meeting, PA",
     },
     {
-        text: "Robert took on my entire “to do” list. He was punctual, professional, talented and possessed a level of expertise that instilled confidence and trust. He shared his expert opinion when I was uncertain about how to proceed on particular projects and even cleaned up after himself (which isn’t always the case with handymen). It was a pleasure working with him. Serenity Home Repair is aptly named. Stress-free home improvements, for sure!",
+        text: "Robert took on my entire “to do” list. He was punctual, professional, talented and possessed a level of expertise that instilled confidence and trust. He shared his expert opinion when I was uncertain about how to proceed on particular projects and even cleaned up after himself (which isn’t always the case with handymen). It was a pleasure working with him. The Island Handyman is aptly named. Stress-free home improvements, for sure!",
         name: "Jamie A.",
         location: "Conshohocken, PA",
     },

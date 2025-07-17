@@ -15,6 +15,7 @@ export default function DropdownForm({ isDropped, onClick }) {
                         isInDropdown={true}
                         id={id}
                         heading="Request Quote"
+                        onSubmit={onClick}
                     />
                 </div>
             </div>

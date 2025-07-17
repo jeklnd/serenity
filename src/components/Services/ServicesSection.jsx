@@ -14,20 +14,20 @@ export default function ServiceSection({ heading }) {
         return (
             <li
                 key={index}
-                className="relative group max-w-[460px] bg-slate-300"
+                className="relative group max-w-[460px] bg-white rounded-lg shadow-lg border border-sy-100"
             >
                 {/* Card Heading */}
                 <div
-                    className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-sm z-10`}
+                    className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-t-lg z-10 bg-blue-600`}
                 >
-                    <div className="mx-auto text-3xl text-gray-700">
+                    <div className="mx-auto text-3xl text-gray-800">
                         {room.icon}
                     </div>
-                    <h2 className="text-xl lg:text-2xl font-medium text-gray-700 text-center">
+                    <h2 className="text-xl lg:text-2xl font-bold text-gray-700 text-center">
                         {room.room}
                     </h2>
 
-                    <div className="w-12 border-2 border-gray-700/75 self-center absolute bottom-0"></div>
+                    <div className="w-12 border-2 border-gray-800 self-center absolute bottom-0"></div>
                 </div>
 
                 {/* Card Background Image*/}
@@ -35,7 +35,7 @@ export default function ServiceSection({ heading }) {
                     src={room.image}
                     alt={`Image of ${room.room}`}
                     fill
-                    className="absolute object-cover rounded-sm group-hover:opacity-0 transition"
+                    className="absolute object-cover rounded-lg group-hover:opacity-0 transition"
                     priority={index < 2}
                     sizes="(max-width: 640px) 100vw, 50vw"
                 />
@@ -43,7 +43,7 @@ export default function ServiceSection({ heading }) {
                 {/* Card Body Text and Button */}
                 <div className="flex items-stretch relative aspect-square cursor-pointer">
                     <div className="z-10 p-8 opacity-0 group-hover:opacity-100 transition flex flex-col justify-around">
-                        <p className="text-lg min-[375px]:text-2xl lg:text-3xl ">
+                        <p className="text-lg min-[375px]:text-2xl lg:text-3xl text-gray-700">
                             {room.text}
                         </p>
                         <button
@@ -52,7 +52,7 @@ export default function ServiceSection({ heading }) {
                         >
                             <Link
                                 href="/contact"
-                                className="block px-4 py-2  bg-sy-500 rounded-sm border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                                className="block px-4 py-2  bg-green-500 text-white rounded-lg border-t-2 border-green-400/50 shadow-sm hover:shadow-md active:shadow-none hover:bg-green-600 transition-colors"
                             >
                                 Request Service{" "}
                                 <ArrowSmallRightIcon className="inline h-5 w-5" />
@@ -65,14 +65,14 @@ export default function ServiceSection({ heading }) {
     });
 
     return (
-        <section id="services" className="bg-slate-400">
+        <section id="services" className="bg-gray-50">
             <div className="container mx-auto flex flex-col items-center px-2 py-14 gap-8">
                 {/* Section Heading */}
                 <div className="text-center">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-700 mb-2 text-center">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playful text-gray-800 mb-2 text-center">
                         {heading}
                     </h1>
-                    <p className="text-xl lg:text-2xl text-gray-600 text-center">
+                    <p className="text-xl lg:text-2xl text-gray-600 text-center font-medium">
                         View our list of offerings by service or room.
                     </p>
                 </div>

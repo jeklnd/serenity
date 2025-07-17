@@ -38,7 +38,7 @@ export default function BeforeAfterSlider() {
                         />
                     </div>
                 </figure>
-                <div className="bg-slate-200 w-full rounded-lg">
+                <div className="bg-gray-100 w-full rounded-lg shadow-md">
                     <figcaption className="p-4 md:px-4 md:py-8 lg:px-0 max-w-4xl mx-auto flex flex-col gap-4">
                         <h3 className="text-gray-600 text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium color sm:text-center">
                             How we helped
@@ -52,7 +52,7 @@ export default function BeforeAfterSlider() {
                         >
                             <Link
                                 href="/contact"
-                                className="block px-4 py-2 bg-sy-500 rounded-sm border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                                className="block px-4 py-2 bg-orange-500 text-white rounded-lg border-t-2 border-orange-400/50 shadow-sm hover:shadow-md active:shadow-none hover:bg-orange-600 transition-colors"
                             >
                                 Request Service{" "}
                             </Link>

@@ -9,27 +9,27 @@ export default function ServicesCards() {
         return (
             <li key={index}>
                 {/* Images */}
-                <div className="flex flex-col rounded-sm shadow-md h-full  bg-gray-200">
+                <div className="flex flex-col rounded-lg shadow-lg h-full bg-white border border-sy-100">
                     <div
-                        className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-sm`}
+                        className={`${styles.bricks} flex flex-col p-4 pb-6 gap-2 relative rounded-t-lg bg-blue-600`}
                     >
-                        <div className="mx-auto text-3xl text-gray-700">
+                        <div className="mx-auto text-3xl text-gray-800">
                             {service.icon}
                         </div>
-                        <h2 className="text-xl lg:text-2xl font-medium text-gray-700 text-center">
+                        <h2 className="text-xl lg:text-2xl font-bold text-gray-700 text-center">
                             {service.name}
                         </h2>
 
-                        <div className="w-12 border-2 border-gray-700/75 self-center absolute bottom-0"></div>
+                        <div className="w-12 border-2 border-gray-800 self-center absolute bottom-0"></div>
                     </div>
                     <ul className="p-2 grow">
                         {service.listItems.map((listItem, i) => {
                             return (
                                 <li
                                     key={i}
-                                    className="list-disc list-inside marker:text-sy-600 px-4"
+                                    className="list-disc list-inside marker:text-orange-500 px-4"
                                 >
-                                    <p className="inline text-lg sm:text-xl lg:text-2xl text-gray-600">
+                                    <p className="inline text-lg sm:text-xl lg:text-2xl text-gray-700">
                                         {listItem}
                                     </p>
                                 </li>
@@ -42,7 +42,7 @@ export default function ServicesCards() {
                     >
                         <Link
                             href="/contact"
-                            className="block px-4 py-2  bg-sy-500 rounded-sm border-t-2 border-sy-400/50 shadow-sm hover:shadow-md active:shadow-none"
+                            className="block px-4 py-2  bg-green-500 text-white rounded-lg border-t-2 border-green-400/50 shadow-sm hover:shadow-md active:shadow-none hover:bg-green-600 transition-colors"
                         >
                             Request Service{" "}
                             <ArrowSmallRightIcon className="inline h-5 w-5" />

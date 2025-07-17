@@ -19,8 +19,8 @@ export default function NavigationBar() {
     };
     return (
         <>
-            <nav className="bg-gray-200 drop-shadow-md z-40 relative">
-                <div className="fixed top-0 w-screen border-2 border-sy-500"></div>
+            <nav className="bg-orange-50 drop-shadow-md z-40 relative">
+                <div className="fixed top-0 w-screen border-2 border-orange-500"></div>
 
                 <div className="container mx-auto flex justify-between items-center p-4 gap-4">
                     <div className="flex items-center gap-4">
